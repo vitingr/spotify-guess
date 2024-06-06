@@ -1,4 +1,5 @@
-import { MusicProps } from '@/components/common/Cards/MusicCard/types'
+import { MusicProps } from "../components/common/Cards/MusicCard/types";
+
 
 export const ARTISTS_DATA: MusicProps[] = [
   {
@@ -16,7 +17,7 @@ export const ARTISTS_DATA: MusicProps[] = [
   },
   {
     name: 'Joe Price',
-    picture: 'https://cibs.org/wp-content/uploads/2010/07/ibhof-joeprice.jpg',
+    picture: 'https://i.scdn.co/image/ab67616d00001e02a41e3919b6298b1743b5a8f4',
     background:
       'https://is1-ssl.mzstatic.com/image/thumb/Music/30/0e/c9/mzi.mxiqavru.tif/600x600bf-60.jpg',
     music: {
@@ -319,7 +320,7 @@ export const ARTISTS_DATA: MusicProps[] = [
     name: 'Frank Ocean',
     picture: 'https://i.scdn.co/image/ab6761610000e5ebee3123e593174208f9754fab',
     background:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOwpjrTKVBdw5xHm-W34w4yRKDmfXn8l_iGcI2jFN_Rw&s',
+      'https://monkeybuzz.com.br/wp-content/uploads/2016/08/frank_ocean-blonde-57c00b497793a.jpg?w=640',
     music: {
       label: 'Pink + White',
       href: 'https://open.spotify.com/intl-pt/track/3xKsf9qdS1CyvXSMEid6g8?si=0eb4e2a1c4d84056'
@@ -366,7 +367,7 @@ export const ARTISTS_DATA: MusicProps[] = [
     name: 'Michael Jackson',
     picture: 'https://i.scdn.co/image/ab6761610000e5eb0e08ea2c4d6789fbf5cbe0aa',
     background:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3R6lqPLw3qdCzfZeMAxT3Un8RuiZlnye0KqpOGkSqYQ&s',
+      'https://i.scdn.co/image/ab67616d0000b273c9b9b62ad974e3f6587edd54',
     music: {
       label: 'Billie Jean',
       href: 'https://open.spotify.com/intl-pt/track/5ChkMS8OtdzJeqyybCc9R5?si=2b6cf22609e548a1'

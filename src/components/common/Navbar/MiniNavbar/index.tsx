@@ -12,23 +12,23 @@ export const MiniNavbar = ({ showMenu, setShowMenu }: MiniNavbarProps) => {
     <div className="animate__animated animate__fadeInDown z-20 fixed right-0 bg-[#fff] shadow-md h-[565px] sm:h-[545px] w-[325px] border border-[#f7f7f7] translate-y-2 transition-all rounded-lg sm:mt-[25px] drop-shadow-md mt-[25px] lg:left-[70%]">
       <div className="px-10 py-6">
         <h1 className="text-xl font-semibold text-center">
-          Bem-Vindo ao nosso projeto para comércios
+          Bem-Vindo ao nosso jogo
         </h1>
       </div>
       <div className="w-full flex gap-4 p-6 bg-[#f7f7f7] items-center">
         <img
-          src="https://cdn-icons-png.flaticon.com/512/9679/9679459.png"
+          src="https://cdn-icons-png.flaticon.com/512/4472/4472584.png"
           className="w-[50px] h-[50px] selection:bg-transparent"
           alt="cellphone-picture"
         />
         <div>
-          <h4 className="text-sm font-semibold">Bem-vindo</h4>
+          <h4 className="text-sm font-semibold">Código-fonte</h4>
           <p className="text-xs mt-1 text-slate-500">
             Participe do nosso projeto! acesse nosso repositório no github e
             deixe uma estrela para ajudar a gente no desenvolvimento dele.
           </p>
           <Link
-            href={'https://github.com/project-comercio/'}
+            href={'https://github.com/vitingr/spotify-guess'}
             target="_blank"
             className="mt-6 text-principal font-semibold text-xs"
           >

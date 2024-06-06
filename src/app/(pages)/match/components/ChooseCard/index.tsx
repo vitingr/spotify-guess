@@ -8,7 +8,6 @@ import { ARTISTS_DATA } from '@/src/constants/artists'
 import { randomize } from '@/src/utils/functions/randomItem'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import { toast } from 'react-toastify'
 
 export const ChooseCard: React.FC = () => {
   const [leftMusic, setLeftMusic] = useState<MusicProps>()
@@ -30,7 +29,6 @@ export const ChooseCard: React.FC = () => {
       setLeftMusic(rightMusic)
       await randomizeRightMusic()
     } else {
-      toast.error('Você perdeu!')
       setShowDefeatPopup(!showDefeatPopup)
     }
   }

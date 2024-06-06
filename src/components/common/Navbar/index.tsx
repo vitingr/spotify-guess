@@ -16,10 +16,10 @@ export const Navbar: React.FC = () => {
     status !== 'loading' && (
       <>
         <nav className={`w-screen py-5 flex flex-col items-center`}>
-          <section className="glassmorphism-navbar fixed p-2 w-full max-w-6xl mx-auto flex justify-center items-center">
+          <section className="glassmorphism-navbar fixed p-2 w-full max-w-6xl z-30 mx-auto flex justify-center items-center">
             <span className="flex font-[700] justify-start text-lg cursor-pointer lg:text-3xl">
               <span
-                className="font-[700] text-transparent uppercase text-lg lg:text-2xl bg-clip-text
+                className="font-[700] text-transparent text-lg lg:text-2xl bg-clip-text
         bg-gradient-to-r from-green-600 to-green-500 flex"
               >
                 spotify
@@ -29,17 +29,21 @@ export const Navbar: React.FC = () => {
               </span>
             </span>
             <ul className="flex gap-8 items-center justify-center ml-6 w-full">
-              <li className="text-sm navbar__link relative cursor-pointer font-medium">
-                Ínicio
-              </li>
+              <Link href="/">
+                <li className="text-sm navbar__link relative cursor-pointer font-medium">
+                 Ínicio
+                </li>
+              </Link>
               <Link href="/match">
                 <li className="text-sm navbar__link relative cursor-pointer font-medium">
                   Jogar
                 </li>
               </Link>
-              <li className="text-sm navbar__link relative cursor-pointer font-medium">
-                Nossa playlist
-              </li>
+              <Link href="https://open.spotify.com/playlist/5lDQy4FDom9lohWRu5Xsjs?si=6e57c8c1c65747c5" target="_blank">
+                <li className="text-sm navbar__link relative cursor-pointer font-medium">
+                 Nossa playlist
+               </li>
+              </Link>
               <li className="text-sm navbar__link relative cursor-pointer font-medium">
                 Como jogar
               </li>

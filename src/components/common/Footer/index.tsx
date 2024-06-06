@@ -1,17 +1,9 @@
-
-import Link from 'next/link'
-import React from 'react'
-import { FooterData, FooterLink } from './types'
-import {
-  FaFacebook,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-  FaYoutube
-} from 'react-icons/fa'
-import Image from 'next/image'
-import { footerLinks } from '@/src/constants/footer'
+import Link from 'next/link';
+import React from 'react';
+import { FooterData, FooterLink } from './types';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import Image from 'next/image';
+import { footerLinks } from '@/src/constants/footer';
 
 const Footer = () => {
   return (
@@ -29,10 +21,8 @@ const Footer = () => {
               GUESS
             </span>
           </span>
-          <p className="mt-2 text-[#a2adce]">Impulsionando sua empresa</p>
-          <p className="text-sm text-[#a2adce]">
-            Se torne referência no seu nicho
-          </p>
+          <p className="mt-2 text-[#a2adce]">Teste seus conhecimentos musicais</p>
+          <p className="text-sm text-[#a2adce]"></p>
         </article>
         <article className="flex-row max-w-6xl mx-auto mt-12 w-full">
           <ul className="w-full flex gap-6 flex-wrap sm:flex-nowrap mt-16 sm:mt-0">
@@ -53,25 +43,55 @@ const Footer = () => {
                 ))}
               </li>
             ))}
-            <div className=" min-w-[140px] w-full flex flex-col sm:justify-normal items-center justify-center sm:items-start gap-4">
-              <span className="text-white text-xl">Social Media</span>
-              <p className="text-[#a2adce] text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                quia perferendi!
-              </p>
-              <div className="flex justify-center mt-4 items-center gap-4">
-                <FaFacebook size={22} className="white-icon" />
-                <FaInstagram size={22} className="white-icon" />
-                <FaTwitter size={22} className="white-icon" />
-                <FaYoutube size={22} className="white-icon" />
-                <FaLinkedin size={22} className="white-icon" />
-                <FaGithub size={22} className="white-icon" />
+            <div className="min-w-[140px] w-full flex flex-col sm:justify-normal items-center justify-center sm:items-start gap-4">
+              <span className="text-white text-xl">Criadores</span>
+              <div className="flex flex-col items-start">
+                <div className="flex items-center justify-between w-full">
+                  <p className="text-[#a2adce] text-sm">Matheus Rocha</p>
+                  <div className="flex">
+                    <a
+                      href="https://github.com/rocha985"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="white-icon ml-2"
+                    >
+                      <FaGithub size={22} />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/matheus-rocha-45a077300/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="white-icon ml-2"
+                    >
+                      <FaLinkedin size={22} />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between w-full py-3">
+                  <p className="text-[#a2adce] text-sm">Vitor Gabriel</p>
+                  <div className="flex">
+                    <a
+                      href="https://github.com/vitingr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="white-icon ml-2"
+                    >
+                      <FaGithub size={22} />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/vitor-gabriel-0ab38a261/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="white-icon ml-2"
+                    >
+                      <FaLinkedin size={22} />
+                    </a>
+                  </div>
+                </div>
               </div>
               <figure className="mt-4">
                 <Image
-                  src={
-                    'https://vtp.ifsp.edu.br/images/CDI/Identidade_Visual/IFSP-VTP-Logo-Color-5.png'
-                  }
+                  src={'/svgs/ifsp.png'}
                   alt="ifsp-logo"
                   width={160}
                   height={80}
@@ -82,7 +102,7 @@ const Footer = () => {
         </article>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
