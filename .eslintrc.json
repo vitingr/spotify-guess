@@ -1,0 +1,75 @@
+{
+  "env": {
+    "commonjs": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "standard",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "eslint-plugin-import-helpers",
+    "eslint-plugin-unused-imports",
+    "perfectionist"
+  ],
+  "rules": {
+    "perfectionist/sort-interfaces": "error",
+    "perfectionist/sort-jsx-props": [
+      "error",
+      {
+        "type": "natural",
+        "order": "asc",
+        "groups": ["multiline", "unknown", "shorthand"]
+      }
+    ],
+    "prettier/prettier": "error",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+
+    "react/react-in-jsx-scope": "off",
+    "space-before-function-paren": "off",
+    "react/prop-types": "off",
+    "camelcase": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "none",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "single", "multiple"],
+        "allowSeparatedGroups": false
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          ["module", "/^@ant/", "/^@fullstory/"],
+          "/^@/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ]
+  }
+}

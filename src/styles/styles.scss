@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::after,
+*::before {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #334155;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  @media (resolution: 144dpi) {
+    font-size: 80%;
+  }
+
+  @media (resolution: 108dpi) {
+    font-size: 80%;
+  }
+}
+
+.glassmorphism-card {
+  background: rgba(71, 71, 71, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(116, 39, 126, 0.37);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.white-text * {
+  color: rgba(178, 192, 194, 0.13);
+}
+
+.glassmorphism {
+  background-blend-mode: normal, screen;
+  box-shadow: 0 8px 32px 0 rgba(116, 39, 126, 0.37);
+}
+
+.popup-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.popup-glassmorphism {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  box-shadow: 0 0px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.green-icon * {
+  background: #5deccd;
+}
+
+.dark-icon * {
+  color: #0c1815;
+}
+
+@layer components {
+  .navbar__link:hover {
+    color: #16a34a;
+    transition: all 0.4s;
+  }
+
+  .navbar__link::after {
+    position: absolute;
+    content: "";
+    background-color: #16a34a;
+    height: 3px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    scale: 0;
+    transform-origin: left;
+    transition: all 0.4s;
+  }
+
+  .navbar__link:hover::after {
+    scale: 1;
+  }
+}
+
+.glassmorphism-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--colors-border);
+  background: var(--colors-navBg);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: saturate(180%) blur(7px);
+  backdrop-filter: saturate(180%) blur(7px);
+}
+
+.drawer-toolkit {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply bg-slate-100;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-slate-300;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+  }
+}
+
+.spinner {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  animation: spinner-plncf9 3s infinite;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  border: 9px solid;
+  border-radius: 50%;
+  border-color: white white #0000 #0000;
+  mix-blend-mode: darken;
+  animation: spinner-plncf9 1s infinite linear;
+}
+
+.spinner::after {
+  border-color: #0000 #0000 #dbdcef #dbdcef;
+  animation-direction: reverse;
+}
+
+@keyframes spinner-plncf9 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+.main:before {
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  background-image: url("/assets/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-height: 650px;
+  max-width: 640px;
+  background-image: radial-gradient(at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%),
+    radial-gradient(at 97% 21%, rgb(13, 255, 134) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, rgb(5, 66, 18) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, rgb(255, 183, 59) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, rgb(165, 14, 59) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, rgb(177, 80, 107) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.2;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+.green-icon * {
+  color: #16a34a;
+}
