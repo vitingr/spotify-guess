@@ -5,6 +5,7 @@ import { Sidebar } from './Sidebar'
 import { MiniForm } from '../MiniForm'
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const Navbar: React.FC = () => {
   const { data: session, status } = useSession()
@@ -16,24 +17,6 @@ export const Navbar: React.FC = () => {
       <>
         <nav className={`w-screen py-5 flex flex-col items-center`}>
           <section className="glassmorphism-navbar fixed p-2 w-full max-w-6xl mx-auto flex justify-center items-center">
-            {/* <button onClick={() => setShowMiniForm(!showMiniForm)}>
-            show mini form
-          </button> */}
-            {/* {JSON.stringify(session)}
-          {session?.user ? (
-            <>
-              <figure>
-                <Image
-                  width={60}
-                  height={60}
-                  src={session?.user?.image || ''}
-                  alt="profile image"
-                  className="rounded-full"
-                />
-              </figure>
-              logado
-            </>
-          ) : null} */}
             <span className="flex font-[700] justify-start text-lg cursor-pointer lg:text-3xl">
               <span
                 className="font-[700] text-transparent uppercase text-lg lg:text-2xl bg-clip-text
@@ -49,9 +32,11 @@ export const Navbar: React.FC = () => {
               <li className="text-sm navbar__link relative cursor-pointer font-medium">
                 Ínicio
               </li>
-              <li className="text-sm navbar__link relative cursor-pointer font-medium">
-                Jogar
-              </li>
+              <Link href="/match">
+                <li className="text-sm navbar__link relative cursor-pointer font-medium">
+                  Jogar
+                </li>
+              </Link>
               <li className="text-sm navbar__link relative cursor-pointer font-medium">
                 Nossa playlist
               </li>

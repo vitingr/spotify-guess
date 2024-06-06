@@ -22,14 +22,14 @@ export const ScoreBoard: React.FC = async () => {
   return (
     <Container
       as="section"
-      data-cid="home-header"
+      data-cid="home-scoreboard"
       wrapperClassName="w-full"
       className=" lg:px-12 px-4 lg:py-20 py-12 flex flex-col items-center gap-6 lg:gap-12"
     >
       <h2 className="text-center text-2xl lg:text-3xl font-semibold">
         Ranking dos usuários
       </h2>
-      <ul className='w-full max-w-2xl'>
+      <ul className='w-full max-w-2xl bg-white p-4 rounded-md border border-slate-500'>
         {users.map((user: UserProps, index: number) => (
           <ScoreboardCard user={user} index={index} key={`${user.username}-${index}`} />
         ))}

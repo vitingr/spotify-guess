@@ -1,8 +1,8 @@
 'use client'
 
-
 import { MusicCard } from '@/src/components/common/Cards/MusicCard'
 import { MusicProps } from '@/src/components/common/Cards/MusicCard/types'
+import { ShowDefeatPopup } from '@/src/components/common/ShowDefeatPopup'
 import { Container } from '@/src/components/toolkit/Container'
 import { ARTISTS_DATA } from '@/src/constants/artists'
 import { randomize } from '@/src/utils/functions/randomItem'
@@ -14,9 +14,11 @@ export const ChooseCard: React.FC = () => {
   const [leftMusic, setLeftMusic] = useState<MusicProps>()
   const [rightMusic, setRightMusic] = useState<MusicProps>()
   const [score, setScore] = useState<number>(0)
-  const [showCheckmark, setShowCheckmark] = useState<boolean>(false)
 
-  const handleChooseMusic = (palpite: number) => {
+  const [showCheckmark, setShowCheckmark] = useState<boolean>(false)
+  const [showDefeatPopup, setShowDefeatPopup] = useState<boolean>(false)
+
+  const handleChooseMusic = async (palpite: number) => {
     const correctMusic =
       leftMusic!.listeners > rightMusic!.listeners ? leftMusic : rightMusic
     const selectedMusic = palpite === 0 ? leftMusic : rightMusic
@@ -26,22 +28,22 @@ export const ChooseCard: React.FC = () => {
       setTimeout(() => setShowCheckmark(false), 1500)
       setScore(score + 1)
       setLeftMusic(rightMusic)
-      randomizeRightMusic()
+      await randomizeRightMusic()
     } else {
       toast.error('Você perdeu!')
-      setScore(0)
+      setShowDefeatPopup(!showDefeatPopup)
     }
   }
 
-  const randomizeLeftMusic = () => {
-    setLeftMusic(randomize(ARTISTS_DATA)?.[0] ?? [])
+  const randomizeLeftMusic = async () => {
+    setLeftMusic(await randomize(ARTISTS_DATA)?.[0] ?? [])
   }
 
-  const randomizeRightMusic = () => {
+  const randomizeRightMusic = async () => {
     let newRightMusic: MusicProps
 
     do {
-      newRightMusic = randomize(ARTISTS_DATA)?.[0]
+      newRightMusic = await randomize(ARTISTS_DATA)?.[0]
     } while (
       newRightMusic?.id === leftMusic?.id ||
       newRightMusic?.id === rightMusic?.id
@@ -51,11 +53,13 @@ export const ChooseCard: React.FC = () => {
   }
 
   useEffect(() => {
+    setScore(0)
     randomizeLeftMusic()
     randomizeRightMusic()
   }, [])
 
   return leftMusic && rightMusic ? (
+   <>
     <Container
       as="section"
       data-cid="choose-card-menu"
@@ -113,5 +117,7 @@ export const ChooseCard: React.FC = () => {
         </div>
       </div>
     </Container>
+    <ShowDefeatPopup score={score} setScore={setScore} showDefeatPopup={showDefeatPopup} setShowDefeatPopup={setShowDefeatPopup} />
+   </>
   ) : null
 }
