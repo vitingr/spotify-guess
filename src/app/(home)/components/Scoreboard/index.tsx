@@ -3,11 +3,21 @@
 
 import { ScoreboardCard } from '@/src/components/common/Cards/ScoreboardCard'
 import { Container } from '@/src/components/toolkit/Container'
+import { getHighestScoresUsers } from '@/src/services/users/get'
 import { UserProps } from '@/src/types'
+import { unstable_cache } from 'next/cache'
 
-import { useEffect, useState } from 'react'
+const getUsers = unstable_cache(async () => {
+  const users = await getHighestScoresUsers()
 
-export const ScoreBoard: React.FC = () => {
+  if (users) return users
+}, [], {
+  revalidate: 5 * 60,
+  tags: ["scoreboard"]
+})
+
+export const ScoreBoard: React.FC = async () => {
+  const users: any = await getUsers()
 
   return (
     <Container
@@ -19,6 +29,11 @@ export const ScoreBoard: React.FC = () => {
       <h2 className="text-center text-2xl lg:text-3xl font-semibold">
         Ranking dos usuários
       </h2>
+      <ul className='w-full max-w-2xl'>
+        {users.map((user: UserProps, index: number) => (
+          <ScoreboardCard user={user} index={index} key={`${user.username}-${index}`} />
+        ))}
+      </ul>
     </Container>
   )
 }
