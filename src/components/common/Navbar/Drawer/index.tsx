@@ -1,10 +1,11 @@
 import { Fragment } from 'react'
 
-import { useLockBodyScroll } from '@/hooks/useLockBodyScroll'
+import { useLockBodyScroll } from '@/src/hooks/useLockBodyScroll'
 import { Transition } from '@headlessui/react'
 import { DrawerProps } from './types'
 
 import { CgCloseR } from 'react-icons/cg'
+
 
 export const Drawer: React.FC<DrawerProps> = ({
   children,

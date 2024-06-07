@@ -1,4 +1,5 @@
-import { MusicProps } from '@/components/common/Cards/MusicCard/types'
+import { MusicProps } from "../components/common/Cards/MusicCard/types";
+
 
 export const ARTISTS_DATA: MusicProps[] = [
   {
@@ -16,7 +17,7 @@ export const ARTISTS_DATA: MusicProps[] = [
   },
   {
     name: 'Joe Price',
-    picture: 'https://cibs.org/wp-content/uploads/2010/07/ibhof-joeprice.jpg',
+    picture: 'https://i.scdn.co/image/ab67616d00001e02a41e3919b6298b1743b5a8f4',
     background:
       'https://is1-ssl.mzstatic.com/image/thumb/Music/30/0e/c9/mzi.mxiqavru.tif/600x600bf-60.jpg',
     music: {
@@ -259,7 +260,7 @@ export const ARTISTS_DATA: MusicProps[] = [
     name: 'Imagine Dragons',
     picture: 'https://i.scdn.co/image/ab6761610000e5ebab47d8dae2b24f5afe7f9d38',
     background:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvhjvrDRepyGl8U5YqYUnwI4nEJn9Fosew6S2OqSSwEw&s',
+      'https://i.scdn.co/image/ab67616d0000b2735675e83f707f1d7271e5cf8a',
     music: {
       label: 'Thunder',
       href: 'https://open.spotify.com/intl-pt/track/1zB4vmk8tFRmM9UULNzbLB?si=d144d0fe11964204'
@@ -319,7 +320,7 @@ export const ARTISTS_DATA: MusicProps[] = [
     name: 'Frank Ocean',
     picture: 'https://i.scdn.co/image/ab6761610000e5ebee3123e593174208f9754fab',
     background:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOwpjrTKVBdw5xHm-W34w4yRKDmfXn8l_iGcI2jFN_Rw&s',
+      'https://monkeybuzz.com.br/wp-content/uploads/2016/08/frank_ocean-blonde-57c00b497793a.jpg?w=640',
     music: {
       label: 'Pink + White',
       href: 'https://open.spotify.com/intl-pt/track/3xKsf9qdS1CyvXSMEid6g8?si=0eb4e2a1c4d84056'
@@ -366,12 +367,241 @@ export const ARTISTS_DATA: MusicProps[] = [
     name: 'Michael Jackson',
     picture: 'https://i.scdn.co/image/ab6761610000e5eb0e08ea2c4d6789fbf5cbe0aa',
     background:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3R6lqPLw3qdCzfZeMAxT3Un8RuiZlnye0KqpOGkSqYQ&s',
+      'https://i.scdn.co/image/ab67616d0000b273c9b9b62ad974e3f6587edd54',
     music: {
       label: 'Billie Jean',
       href: 'https://open.spotify.com/intl-pt/track/5ChkMS8OtdzJeqyybCc9R5?si=2b6cf22609e548a1'
     },
     listeners: 1738616915,
     id: 31
+  },
+  {
+    name: 'Queen',
+    picture: 'https://i.scdn.co/image/b040846ceba13c3e9c125d68389491094e7f2982',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27328581cfe196c266c132a9d62',
+    music: {
+      label: 'bohemian Rhapsody',
+      href: 'https://open.spotify.com/intl-pt/track/4u7EnebtmKWzUH433cf5Qv?si=77a88ac6c1244a94'
+    },
+    listeners: 2485989147,
+    id: 32
+  },
+  {
+    name: 'Billie Eilish',
+    picture: 'https://i.scdn.co/image/ab676161000051744a21b4760d2ecb7b0dcdc8da',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273f2248cf6dad1d6c062587249',
+    music: {
+      label: 'everything i wanted',
+      href: 'https://open.spotify.com/intl-pt/track/3ZCTVFBt2Brf31RLEnCkWJ?si=1dbdabe2b42a4663'
+    },
+    listeners: 1611930728,
+    id: 33
+  },
+  {
+    name: 'Lil Nas X',
+    picture: 'https://i.scdn.co/image/ab676161000051740eefd7d68573ea8f0f4db84a',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273be82673b5f79d9658ec0a9fd',
+    music: {
+      label: 'MONTERO',
+      href: 'https://open.spotify.com/intl-pt/track/67BtfxlNbhBmCDR2L2l8qd?si=ba37176f36c64c57'
+    },
+    listeners: 1899516383,
+    id: 34
+  },
+  {
+    name: 'Tommy Richman',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebbb330168f192dbdc28fcbd37',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273ce31aff39a003828576d3930',
+    music: {
+      label: 'MILLION DOLLAR BABY',
+      href: 'https://open.spotify.com/intl-pt/track/7fzHQizxTqy8wTXwlrgPQQ?si=7c4f1bcf60404a83'
+    },
+    listeners: 347574493,
+    id: 35
+  },
+  {
+    name: 'Dua Lipa',
+    picture: 'https://i.scdn.co/image/ab676161000051740c68f6c95232e716f0abee8d',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273838698485511bd9108fadadc',
+    music: {
+      label: 'New Rules',
+      href: 'https://open.spotify.com/intl-pt/track/2ekn2ttSfGqwhhate0LSR0?si=ea00d5d13be34689'
+    },
+    listeners: 2093036163,
+    id: 36
+  },
+  {
+    name: 'JVKE',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebce33386a81a202e149934ec1',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2730af4476af141051c728ee8b9',
+    music: {
+      label: 'golden hour',
+      href: 'https://open.spotify.com/intl-pt/track/5odlY52u43F5BjByhxg7wg?si=1e3c6d3b77ea4e88'
+    },
+    listeners: 1121148454,
+    id: 37
+  },
+  {
+    name: 'Good Neighbours',
+    picture: 'https://i.scdn.co/image/ab67616100005174086e9cff0a7be328669fbcc7',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27316d1ca78222a4fb506a82211',
+    music: {
+      label: 'Home',
+      href: 'https://open.spotify.com/intl-pt/track/6dpLxbF7lfCAnC9QRTjNLK?si=530105300ff64ec5'
+    },
+    listeners: 199258589,
+    id: 38
+  },
+  {
+    name: 'bbno$',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eba8618661086b4c3c71f18680',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2738a6ccb507dd6a66f7f6e2440',
+    music: {
+      label: 'Lalala',
+      href: 'https://open.spotify.com/intl-pt/track/51Fjme0JiitpyXKuyQiCDo?si=380729b800ca4648'
+    },
+    listeners: 967205041,
+    id: 39
+  },
+  {
+    name: 'JID',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb10781f7b76a5eb0d397e02c9',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273cae6e44dcc84e2035c3ad092',
+    music: {
+      label: 'Surround Sound',
+      href: 'https://open.spotify.com/intl-pt/track/1udwFobQ1JoOdWPQrp2b6u?si=626873e9ca4e4753'
+    },
+    listeners: 543617174,
+    id: 40
+  },
+  {
+    name: 'A$AP Rocky',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb5c58c41a506a0d6b32cc6cad',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2739feadc48ab0661e9b3a9170b',
+    music: {
+      label: 'Praise The Lord',
+      href: 'https://open.spotify.com/intl-pt/track/7ycWLEP1GsNjVvcjawXz3z?si=aac34b4e64b54ade'
+    },
+    listeners: 1239520617,
+    id: 41
+  },
+  {
+    name: 'J. Cole',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb4b053c29fd4b317ff825f0dc',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273c6e0948bbb0681ff29cdbae8',
+    music: {
+      label: 'No Role Modelz',
+      href: 'https://open.spotify.com/intl-pt/track/68Dni7IE4VyPkTOH9mRWHr?si=00b60eb55f9e4d16'
+    },
+    listeners: 2226650038,
+    id: 42
+  },
+  {
+    name: 'Katty Perry',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebcf5c73a5c7968862e0d28ce9',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2731e9a057052d59004caf47e22',
+    music: {
+      label: 'Dark Horse',
+      href: 'https://open.spotify.com/intl-pt/track/4jbmgIyjGoXjY01XxatOx6?si=9ac3385a79c5406e'
+    },
+    listeners: 1440974230,
+    id: 43
+  },
+  {
+    name: 'Kanye West',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb6e835a500e791bf9c27a422a',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273428d2255141c2119409a31b2',
+    music: {
+      label: 'Gold Digger',
+      href: 'https://open.spotify.com/intl-pt/track/1PS1QMdUqOal0ai3Gt7sDQ?si=762cce07a0714da9'
+    },
+    listeners: 1143857293,
+    id: 44
+  },
+  {
+    name: 'Arctic Monkeys',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb7da39dea0a72f581535fb11f',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163',
+    music: {
+      label: 'Do I Wanna Know?',
+      href: 'https://open.spotify.com/intl-pt/track/5FVd6KXrgO9B3JPmC8OPst?si=799818cfb6e24fd3'
+    },
+    listeners: 2180675162,
+    id: 45
+  },
+  {
+    name: 'Rihanna',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb99e4fca7c0b7cb166d915789',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27333c6b920eabcf4c00d7a1093',
+    music: {
+      label: 'Needed Me',
+      href: 'https://open.spotify.com/intl-pt/track/4pAl7FkDMNBsjykPXo91B3?si=396397d3a9424e46'
+    },
+    listeners: 1478514132,
+    id: 46
+  },
+  {
+    name: '21 savage',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb4f8f76117470957c0e81e5b2',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273280689ecc5e4b2038bb5e4bd',
+    music: {
+      label: 'a lot',
+      href: 'https://open.spotify.com/intl-pt/track/2t8yVaLvJ0RenpXUIAC52d?si=250d3e6092de4a14'
+    },
+    listeners: 947549598,
+    id: 47
+  },
+  {
+    name: 'Travis Scott',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb19c2790744c792d05570bb71',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273f54b99bf27cda88f4a7403ce',
+    music: {
+      label: 'goosebumps',
+      href: 'https://open.spotify.com/intl-pt/track/6gBFPUFcJLzWGx4lenP6h2?si=2c841d3cb6d24875'
+    },
+    listeners: 2386920425,
+    id: 48
+  },
+  {
+    name: 'Miley Cyrus',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebb4ba86c361191d48cbeb4b32',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273f429549123dbe8552764ba1d',
+    music: {
+      label: 'Flowers',
+      href: 'https://open.spotify.com/intl-pt/track/7DSAEUvxU8FajXtRloy8M0?si=97d8104e34da4631'
+    },
+    listeners: 2018669129,
+    id: 49
+  },
+  {
+    name: 'alt-J',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb3fb5214e667e278a20878a6b',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273028c3bb4b81ee71dd73d1596',
+    music: {
+      label: 'Breezeblocks',
+      href: 'https://open.spotify.com/intl-pt/track/1ZLroqJA8qoS5QEeCo0fA7?si=6aa932d7b59f42e1'
+    },
+    listeners: 837516461,
+    id: 50
   }
+
 ]

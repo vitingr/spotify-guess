@@ -3,4 +3,7 @@ export interface ShowDefeatPopupProps {
   showDefeatPopup: boolean
   score: number
   setScore(arg: number): void
+  randomizeLeftMusic(): void
+  randomizeRightMusic(): void
+  
 }

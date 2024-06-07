@@ -3,7 +3,7 @@ import { MusicCardProps } from './types'
 
 export const MusicCard: React.FC<MusicCardProps> = ({ musicCard }) => {
   return (
-    <article className="animate__fadeIn animate__animated max-w-sm w-full h-[560px] flex flex-col items-center rounded-[2px] drop-shadow-2xl">
+    <article className="animate__fadeIn animate__animated max-w-sm w-full h-[520px] flex flex-col items-center rounded-[2px] drop-shadow-2xl">
       <div className="rounded-sm h-full max-w-sm overflow-hidden relative cursor-pointer w-full bg-slate-800 group">
         <div
           className="w-full h-full absolute bg-cover bg-no-repeat transition-all duration-500 group-hover:brightness-110 group-hover:scale-110 cursor-pointer "
