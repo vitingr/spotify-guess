@@ -389,7 +389,7 @@ export const ARTISTS_DATA: MusicProps[] = [
   },
   {
     name: 'Billie Eilish',
-    picture: 'https://i.scdn.co/image/ab676161000051744a21b4760d2ecb7b0dcdc8da',
+    picture: 'https://i.scdn.co/image/ab67616d00001e022a038d3bf875d23e4aeaa84e',
     background:
       'https://i.scdn.co/image/ab67616d0000b273f2248cf6dad1d6c062587249',
     music: {
@@ -595,7 +595,7 @@ export const ARTISTS_DATA: MusicProps[] = [
     name: 'alt-J',
     picture: 'https://i.scdn.co/image/ab6761610000e5eb3fb5214e667e278a20878a6b',
     background:
-      'https://i.scdn.co/image/ab6761610000e5eb3fb5214e667e278a20878a6b',
+      'https://i.scdn.co/image/ab67616d0000b273028c3bb4b81ee71dd73d1596',
     music: {
       label: 'Breezeblocks',
       href: 'https://open.spotify.com/intl-pt/track/1ZLroqJA8qoS5QEeCo0fA7?si=6aa932d7b59f42e1'
@@ -902,6 +902,306 @@ export const ARTISTS_DATA: MusicProps[] = [
     },
     listeners: 504568898,
     id: 75
-  }
+  },
+  {
+    name: 'Redbone',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebeb9c771371e6e5d14588963d',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27346814e1b44e54d806753801e',
+    music: {
+      label: 'Come and Get Your Love',
+      href: 'https://open.spotify.com/intl-pt/track/7GVUmCP00eSsqc4tzj1sDD?si=84402757bafa4e51'
+    },
+    listeners: 558074212,
+    id: 76
+  },
+  {
+    name: 'Daryl & john Oates',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebae81417d966e209b735b1160',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2733ebc5b9d8942069d3b920550',
+    music: {
+      label: 'Rich Girl',
+      href: 'https://open.spotify.com/intl-pt/track/0qRR9d89hIS0MHRkQ0ejxX?si=ca3743b4f55e448d'
+    },
+    listeners: 659371256,
+    id: 77
+  },
+  {
+    name: 'Creedence Clearwater Revival',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebd2e2b04b7ba5d60b72f54506',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27351f311c2fb06ad2789e3ff91',
+    music: {
+      label: 'Have You Ever Seen The Rain',
+      href: 'https://open.spotify.com/intl-pt/track/2LawezPeJhN4AWuSB0GtAU?si=35b7124d8976478f'
+    },
+    listeners: 1568626450,
+    id: 78
+  },
+  {
+    name: 'Eagles',
+    picture: 'https://i.scdn.co/image/ab67616d0000b273e71a6bd0a7bd0bc190807774',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2734637341b9f507521afa9a778',
+    music: {
+      label: 'Hotel California',
+      href: 'https://open.spotify.com/intl-pt/track/40riOy7x9W7GXjyGp4pjAv?si=e15adcb645914d32'
+    },
+    listeners: 1597697257,
+    id: 79
+  },
+  {
+    name: 'The Rolling Stones',
+    picture: 'https://i.scdn.co/image/ab67616d0000b273e5bd9c16543752620815ebdc',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273bad7062c3fd2f2d037989694',
+    music: {
+      label: 'Paint It, Black',
+      href: 'https://open.spotify.com/intl-pt/track/63T7DJ1AFDD6Bn8VzG6JE8?si=27a5c97e148f4efa'
+    },
+    listeners: 1191721820,
+    id: 80
+  },
+  {
+    name: 'The White Stripes',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb70cc06de8fc28226d4743cd9',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273a69f71a8794e2d867a52f98f',
+    music: {
+      label: 'Seven Nation Army',
+      href: 'https://open.spotify.com/intl-pt/track/3dPQuX8Gs42Y7b454ybpMR?si=95f106131b75424b'
+    },
+    listeners: 1647916903,
+    id: 81
+  },
+  {
+    name: 'Nirvana',
+    picture: 'https://i.scdn.co/image/a4e10b79a642e9891383448cbf37d7266a6883d6',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273e175a19e530c898d167d39bf',
+    music: {
+      label: 'Smells Like Teen Spirit',
+      href: 'https://open.spotify.com/intl-pt/track/4CeeEOM32jQcH3eN9Q2dGj?si=dcdf443265a34894'
+    },
+    listeners: 2014201494,
+    id: 82
+  },
+  {
+    name: 'Led Zeppelin',
+    picture: 'https://i.scdn.co/image/207803ce008388d3427a685254f9de6a8f61dc2e',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273c8a11e48c91a982d086afc69',
+    music: {
+      label: 'Stairway to Heaven',
+      href: 'https://open.spotify.com/intl-pt/track/5CQ30WqJwcep0pYcV4AMNc?si=074ae28a25284e9a'
+    },
+    listeners: 974232359,
+    id: 83
+  },
+  {
+    name: 'Journey',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebe848dfb35ea4969099662dfd',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273c5653f9038e42efad2f8a266',
+    music: {
+      label: "Don't Stop Believin'",
+      href: 'https://open.spotify.com/intl-pt/track/77NNZQSqzLNqh2A9JhLRkg?si=34bee8e5f6ab4521'
+    },
+    listeners: 1905797195,
+    id: 84
+  },
+  {
+    name: 'Deep Purple',
+    picture: 'https://i.scdn.co/image/ab67616d00001e023f07fc011449e4e4932a83b1',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27325b36a6170824fefd38d337e',
+    music: {
+      label: 'Smoke On The Water',
+      href: 'https://open.spotify.com/intl-pt/track/0XHWClSz0v6RIaRSGqJH3X?si=2478b5a80198470b'
+    },
+    listeners: 529184814,
+    id: 85
+  },
+  {
+    name: 'Kansas',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebce30906f8428166de2e7b592',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27359f0f56a7cd13526b5b4204c',
+    music: {
+      label: 'Dust in the Wind',
+      href: 'https://open.spotify.com/intl-pt/track/6zeE5tKyr8Nu882DQhhSQI?si=4f51f1850dce4a56'
+    },
+    listeners: 727375824,
+    id: 86
+  },
+  {
+    name: 'Green Day',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb6ff0cd5ef2ecf733804984bb',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27308a1b1e0674086d3f1995e1b',
+    music: {
+      label: 'American Idiot',
+      href: 'https://open.spotify.com/intl-pt/track/6nTiIhLmQ3FWhvrGafw2zj?si=70b3fb3158f7449a'
+    },
+    listeners: 950123630,
+    id: 87
+  },
+  {
+    name: 'The Animals',
+    picture: 'https://i.scdn.co/image/ab67616d00001e023748833f246466f02d2d4fc3',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273015c484a7aca592df1a77828',
+    music: {
+      label: 'House of the Rising Sun',
+      href: 'https://open.spotify.com/intl-pt/track/4mn2kNTqiGLwaUR8JdhJ1l?si=f1d92b76688c4141'
+    },
+    listeners: 964046978,
+    id: 88
+  },
+  {
+    name: 'Black Sabbath',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb4870cd833ebe1092601820c3',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273d5fccf9ce08b6a1e7d12a222',
+    music: {
+      label: 'Iron Man',
+      href: 'https://open.spotify.com/intl-pt/track/0vJYFKg9z1IvZiQUyX19cD?si=37359ffd7cdb4af1'
+    },
+    listeners: 480462227,
+    id: 89
+  },
+  {
+    name: 'Rage Against The Machine',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebda4bd2b213cae330e2a4a901',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27354ab617bc2d4974ab6ffbece',
+    music: {
+      label: 'Killing In The Name',
+      href: 'https://open.spotify.com/intl-pt/track/59WN2psjkt1tyaxjspN8fp?si=fffe60734cdf4ceb'
+    },
+    listeners: 902903420,
+    id: 90
+  },
+  {
+    name: 'Blur',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb00620d736644d2359ce99430',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273de114203356c1f7b136960b6',
+    music: {
+      label: 'Song 2',
+      href: 'https://open.spotify.com/intl-pt/track/3GfOAdcoc3X5GPiiXmpBjK?si=de2b907c99e54766'
+    },
+    listeners: 887211504,
+    id: 91
+  },
+  {
+    name: 'Pink Floyd',
+    picture: 'https://i.scdn.co/image/ab67616d0000b273ea7caaff71dea1051d49b2fe',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2735d48e2f56d691f9a4e4b0bdf',
+    music: {
+      label: 'Another Brick in the Wall, pt. 2',
+      href: 'https://open.spotify.com/intl-pt/track/4gMgiXfqyzZLMhsksGmbQV?si=1bd47ec852344730'
+    },
+    listeners: 883218046,
+    id: 92
+  },
+  {
+    name: 'Lynyrd Skynyrd',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb451eb07ddc6e68d3e474c2bf',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27317e1907923e91181f38290ac',
+    music: {
+      label: 'Sweet Home Alabama',
+      href: 'https://open.spotify.com/intl-pt/track/7e89621JPkKaeDSTQ3avtg?si=3f25570d0da04036'
+    },
+    listeners: 1298069688,
+    id: 93
+  },
+  {
+    name: 'The Clash',
+    picture: 'https://i.scdn.co/image/9061b7dad3306249408403d72a410a62c26e794c',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27325a4df452a3c42ccc2e9288b',
+    music: {
+      label: 'Should I Stay or Should I Go',
+      href: 'https://open.spotify.com/intl-pt/track/39shmbIHICJ2Wxnk1fPSdz?si=50f7d6365ee048ec'
+    },
+    listeners: 1045362882,
+    id: 94
+  },
+  {
+    name: 'Ozzy Osbourne',
+    picture: 'https://i.scdn.co/image/ab67616100005174b5b52f7e13f720c7a4856306',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2735776e18c520194c48d92815b',
+    music: {
+      label: 'Crazy Train',
+      href: 'https://open.spotify.com/intl-pt/track/7ACxUo21jtTHzy7ZEV56vU?si=e43551bf6f4442c3'
+    },
+    listeners: 668239715,
+    id: 95
+  },
+  {
+    name: 'Electric Light Orchestra',
+    picture: 'https://i.scdn.co/image/ab676161000051746ee22df4403027ae525ced87',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2738c4e95986c803791125e8991',
+    music: {
+      label: 'Mr. Blue Sky',
+      href: 'https://open.spotify.com/intl-pt/track/2RlgNHKcydI9sayD2Df2xp?si=626539baefcd44f4'
+    },
+    listeners: 960666042,
+    id: 96
+  },
+  {
+    name: 'Mountain',
+    picture: 'https://i.scdn.co/image/ed01689ede60211755591fdb3542aa05d366adc8',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273411cacfc3518a9f2c4a670f6',
+    music: {
+      label: 'Mississippi Queen',
+      href: 'https://open.spotify.com/intl-pt/track/4vO9dmzNRqDhFY3jD1a3P7?si=e5982ae613af4f02'
+    },
+    listeners: 1,
+    id: 97
+  },
+  {
+    name: 'Rainbow Kitten Surprise',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb88aed23707da4abd1b8e2fe7',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2739529217e48fc8bab89c8a1f9',
+    music: {
+      label: "It's Called: Freefall",
+      href: 'https://open.spotify.com/intl-pt/track/474uVhyGgK5MtY9gMcDgGl?si=9e2bf464e8354923'
+    },
+    listeners: 399790887,
+    id: 98
+  },
+  {
+    name: 'Tyler, The Creator',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb8278b782cbb5a3963db88ada',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2738940ac99f49e44f59e6f7fb3',
+    music: {
+      label: 'See You Again',
+      href: 'https://open.spotify.com/intl-pt/track/7KA4W4McWYRpgf0fWsJZWB?si=9320176db8f14667'
+    },
+    listeners: 1597745641,
+    id: 99
+  },
+  {
+    name: 'Childish Gambino',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb3ef779aa0d271adb2b6a3ded',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27320f2c5aeee77918bf9ac0dab',
+    music: {
+      label: 'Redbone',
+      href: 'https://open.spotify.com/intl-pt/track/0WtDGnWL2KrMCk0mI1Gpwz?si=d91d3f84abec4318'
+    },
+    listeners: 1611057682,
+    id: 100
+  },
 
 ]
