@@ -115,7 +115,7 @@ export const ChooseCard: React.FC = () => {
         </div>
       </div>
     </Container>
-    <ShowDefeatPopup score={score} setScore={setScore} showDefeatPopup={showDefeatPopup} setShowDefeatPopup={setShowDefeatPopup} />
+    <ShowDefeatPopup score={score} setScore={setScore} showDefeatPopup={showDefeatPopup} setShowDefeatPopup={setShowDefeatPopup} randomizeRightMusic={randomizeRightMusic} randomizeLeftMusic={randomizeLeftMusic} />
    </>
   ) : null
 }

@@ -260,7 +260,7 @@ export const ARTISTS_DATA: MusicProps[] = [
     name: 'Imagine Dragons',
     picture: 'https://i.scdn.co/image/ab6761610000e5ebab47d8dae2b24f5afe7f9d38',
     background:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvhjvrDRepyGl8U5YqYUnwI4nEJn9Fosew6S2OqSSwEw&s',
+      'https://i.scdn.co/image/ab67616d0000b2735675e83f707f1d7271e5cf8a',
     music: {
       label: 'Thunder',
       href: 'https://open.spotify.com/intl-pt/track/1zB4vmk8tFRmM9UULNzbLB?si=d144d0fe11964204'

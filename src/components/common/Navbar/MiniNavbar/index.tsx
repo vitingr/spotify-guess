@@ -24,8 +24,8 @@ export const MiniNavbar = ({ showMenu, setShowMenu }: MiniNavbarProps) => {
         <div>
           <h4 className="text-sm font-semibold">Código-fonte</h4>
           <p className="text-xs mt-1 text-slate-500">
-            Participe do nosso projeto! acesse nosso repositório no github e
-            deixe uma estrela para ajudar a gente no desenvolvimento dele.
+          Confira o nosso projeto! Acesse o nosso repositório no GitHub 
+          e dê uma estrela para nos apoiar no desenvolvimento.
           </p>
           <Link
             href={'https://github.com/vitingr/spotify-guess'}

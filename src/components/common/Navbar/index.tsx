@@ -44,9 +44,12 @@ export const Navbar: React.FC = () => {
                  Nossa playlist
                </li>
               </Link>
+              <Link href="/#como-jogar"> 
               <li className="text-sm navbar__link relative cursor-pointer font-medium">
                 Como jogar
               </li>
+              </Link>
+              
             </ul>
             <div className=" pl-4 border-l gap-4 w-auto border-slate-200 flex items-center justify-end">
               <Sidebar />
