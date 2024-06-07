@@ -16,7 +16,7 @@ const handler = NextAuth({
       clientId: process.env.GOOGLE_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!
     }),
-    CredentialsProvider({  
+    CredentialsProvider({
       name: 'credentials',
       credentials: {
         username: {
@@ -27,7 +27,9 @@ const handler = NextAuth({
         password: { label: 'Password', type: 'password' }
       },
       async authorize(credentials, req) {
-        if (!credentials?.username || !credentials?.password) {
+        console.log(credentials)
+
+        if (!credentials) {
           console.error('Credenciais inexistentes')
           return null
         }
@@ -86,14 +88,14 @@ const handler = NextAuth({
     })
   ],
   pages: {
-    signIn: '/login',
+    signIn: '/',
     signOut: '/api/auth/signOut',
-    error: '/api/auth/error',
-    newUser: undefined
+    error: '/api/auth/error'
   },
   callbacks: {
     async session({ session, token }: { session: any; token: any }) {
-      console.log('session')
+      console.log(`session: ${JSON.stringify(session)}`)
+      console.log(`token: ${JSON.stringify(token)}`)
       if (token) {
         if (!session.user) {
           session.user = {}
@@ -105,13 +107,22 @@ const handler = NextAuth({
       }
       return session
     },
+    async jwt({ token, user, account, profile }) {
+      console.log(`token: ${JSON.stringify(token)}`)
+      console.log(`user: ${JSON.stringify(user)}`)
+      console.log(`profile: ${JSON.stringify(profile)}`)
+      console.log(`account: ${JSON.stringify(account)}`)
+      return token
+    },
     async signIn({ profile, credentials }) {
       try {
         if (credentials) {
           const user = await getUserByUsername(credentials.username! as string)
 
           if (!user) {
-            const username = (credentials.username as string).toLocaleLowerCase()
+            const username = (
+              credentials.username as string
+            ).toLocaleLowerCase()
             const randomBackgroundColor = getRandomBackgroundColor()
             const randomPicture = getRandomPicture()
             const hashedPassword = await generateHash(

@@ -9,9 +9,9 @@ export const Features: React.FC = () => {
       as="section"
       data-cid="home-features"
       wrapperClassName="w-full"
-      className=" lg:px-12 px-4 lg:pb-36 flex flex-col items-center gap-6 lg:gap-12"
+      className=" lg:px-12 px-4 lg:pb-36 flex flex-col items-center gap-6 lg:gap-12 relative"
     >
-       <div id="como-jogar" style={{ height: '120px' }}></div>
+      <div id="como-jogar" className='absolute' />
       <h2 className='text-center text-2xl lg:text-3xl font-semibold'>Como jogar</h2>
       <ul className="w-full flex justify-center self-stretch h-auto items-center">
         {FEATURES_DATA.map((feature: Feature, index: number) => (
