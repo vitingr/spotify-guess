@@ -381,7 +381,7 @@ export const ARTISTS_DATA: MusicProps[] = [
     background:
       'https://i.scdn.co/image/ab67616d0000b27328581cfe196c266c132a9d62',
     music: {
-      label: 'bohemian Rhapsody',
+      label: 'Bohemian Rhapsody',
       href: 'https://open.spotify.com/intl-pt/track/4u7EnebtmKWzUH433cf5Qv?si=77a88ac6c1244a94'
     },
     listeners: 2485989147,
@@ -595,13 +595,313 @@ export const ARTISTS_DATA: MusicProps[] = [
     name: 'alt-J',
     picture: 'https://i.scdn.co/image/ab6761610000e5eb3fb5214e667e278a20878a6b',
     background:
-      'https://i.scdn.co/image/ab67616d0000b273028c3bb4b81ee71dd73d1596',
+      'https://i.scdn.co/image/ab6761610000e5eb3fb5214e667e278a20878a6b',
     music: {
       label: 'Breezeblocks',
       href: 'https://open.spotify.com/intl-pt/track/1ZLroqJA8qoS5QEeCo0fA7?si=6aa932d7b59f42e1'
     },
     listeners: 837516461,
     id: 50
+  },
+  {
+    name: 'Lewis Capaldi',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebea7538654040e553a7b0fc28',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273fc2101e6889d6ce9025f85f2',
+    music: {
+      label: 'Someone You Loved',
+      href: 'https://open.spotify.com/intl-pt/track/7qEHsqek33rTcFNT9PFqLf?si=6d14da02d5144d0d'
+    },
+    listeners: 3415244785,
+    id: 51
+  },
+  {
+    name: 'Harry Styles',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebf7db7c8ede90a019c54590bb',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273b46f74097655d7f353caab14',
+    music: {
+      label: 'As it Was',
+      href: 'https://open.spotify.com/intl-pt/track/4Dvkj6JhhA12EX05fT7y2e?si=9e2fc2ec5dfe4add'
+    },
+    listeners: 3281591790,
+    id: 52
+  },
+  {
+    name: 'Tones And I',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebed612183a08152d8ab2eb0f0',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27338802659d156935ada63c9e3',
+    music: {
+      label: 'Dance Monkey',
+      href: 'https://open.spotify.com/intl-pt/track/2XU0oxnq2qxCpomAAuJY8K?si=841ad0c0e6ca4707'
+    },
+    listeners: 3066812215,
+    id: 53
+  },
+  {
+    name: 'Glass Animals',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb4d0c5a183b44073ca01dee0b',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273ab9d1ae18b640b7b0ce390d4',
+    music: {
+      label: 'Heat Waves',
+      href: 'https://open.spotify.com/intl-pt/track/3USxtqRwSYz57Ewm6wWRMp?si=a4ad041827064177'
+    },
+    listeners: 2985917707,
+    id: 54
+  },
+  {
+    name: 'The Neighbourhood',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebdf0b5ac84376a0a4b2166816',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2738265a736a1eb838ad5a0b921',
+    music: {
+      label: 'Sweater Weather',
+      href: 'https://open.spotify.com/intl-pt/track/2QjOHCTQ1Jl3zawyYOpxh6?si=9001e756fc294274'
+    },
+    listeners: 2898304359,
+    id: 55
+  },
+  {
+    name: 'Juice WRLD',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb1908e1a8b79abf71d5598944',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273c58698d14b372d042b6eeb05',
+    music: {
+      label: 'Lucid Dreams',
+      href: 'https://open.spotify.com/intl-pt/track/285pBltuF7vW8TeWk8hdRR?si=342a1b9a9ea4448a'
+    },
+    listeners: 2542867062,
+    id: 56
+  },
+  {
+    name: 'Hozier',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebad85a585103dfc2f3439119a',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27392b2db301339457ef79b5224',
+    music: {
+      label: 'Eat Your Young',
+      href: 'https://open.spotify.com/intl-pt/track/6PkxSIt2TYLMFa8ybyngVP?si=49723e80cb2c4f12'
+    },
+    listeners: 181573302,
+    id: 57
+  },
+  {
+    name: 'AC/DC',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebc4c77549095c86acb4e77b37',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27351c02a77d09dfcd53c8676d0',
+    music: {
+      label: 'Highway To Hell',
+      href: 'https://open.spotify.com/intl-pt/track/2zYzyRzz6pRmhPzyfMEC8s?si=e2bd0245edfd4c47'
+    },
+    listeners: 1579785243,
+    id: 58
+  },
+  {
+    name: 'Sam Smith',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb7ba9b5726cdd0814dc0cda2e',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273a935e4689f15953311772cc4',
+    music: {
+      label: 'Unholy',
+      href: 'https://open.spotify.com/intl-pt/track/3nqQXoyQOWXiESFLlDF1hG?si=14f0ca2bddce4977'
+    },
+    listeners: 1551014143,
+    id: 59
+  },
+  {
+    name: 'XXXTentacion',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebf0c20db5ef6c6fbe5135d2e4',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273806c160566580d6335d1f16c',
+    music: {
+      label: 'Hope',
+      href: 'https://open.spotify.com/intl-pt/track/2ZRo7axmMPeSVUvDbGkJah?si=e6ac7c52898844e2'
+    },
+    listeners: 1436663467,
+    id: 60
+  },
+  {
+    name: 'BTS',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebd642648235ebf3460d2d1f6a',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273ed656680374294d5217193fa',
+    music: {
+      label: 'Butter',
+      href: 'https://open.spotify.com/intl-pt/track/1mWdTewIgB3gtBM3TOSFhB?si=5bdf06faace24566'
+    },
+    listeners: 1255641915,
+    id: 61
+  },
+  {
+    name: 'Doja Cat',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebe94f88ff74ae4ddcab961f97',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273f14aa81116510d3a6df8432b',
+    music: {
+      label: 'Say So',
+      href: 'https://open.spotify.com/intl-pt/track/3Dv1eDb0MEgF93GpLXlucZ?si=66d88c09a61d4d21'
+    },
+    listeners: 1197359947,
+    id: 62
+  },
+  {
+    name: 'Daddy Yankee',
+    picture: 'https://i.scdn.co/image/ab67616100005174aa534de724c7a565c07bb3f5',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2734f15e5871e85d1da64024c3d',
+    music: {
+      label: 'Gasolina',
+      href: 'https://open.spotify.com/intl-pt/track/228BxWXUYQPJrJYHDLOHkj?si=2497117dbf604703'
+    },
+    listeners: 893370315,
+    id: 63
+  },
+  {
+    name: 'Cardi B',
+    picture: 'https://i.scdn.co/image/ab67616d00001e02bf659bd61148f5a13b1de6da',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273a0caffda54afd0a65995bbab',
+    music: {
+      label: 'Bodak Yellow',
+      href: 'https://open.spotify.com/intl-pt/track/6KBYefIoo7KydImq1uUQlL?si=741c6c56a1c84f16'
+    },
+    listeners: 893320224,
+    id: 64
+  },
+  {
+    name: 'Tracy Chapman',
+    picture: 'https://i.scdn.co/image/ab67616d00001e02e0ea30afca82960487f5e4c2',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27390b8a540137ee2a718a369f9',
+    music: {
+      label: 'Fast Car',
+      href: 'https://open.spotify.com/intl-pt/track/2M9ro2krNb7nr7HSprkEgo?si=a5325f315e0b4458'
+    },
+    listeners: 890206446,
+    id: 65
+  },
+  {
+    name: 'Slipknot',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebd0cdb283a7384a0edb665182',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2736b3463e7160d333ada4b175a',
+    music: {
+      label: 'Duality',
+      href: 'https://open.spotify.com/intl-pt/track/61mWefnWQOLf90gepjOCb3?si=8df55b0ae3b8412b'
+    },
+    listeners: 741209359,
+    id: 66
+  },
+  {
+    name: '2Pac',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb7f5cc432c9c109248ebec1ac',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273a786ad0992cfe0b2719729bf',
+    music: {
+      label: 'Ambitionz Az A Ridah',
+      href: 'https://open.spotify.com/intl-pt/track/5g9lS8deSIxItFBmZRC4vN?si=9d65e1a6d6984d76'
+    },
+    listeners: 741782825,
+    id: 67
+  },
+  {
+    name: 'Blackpink',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebc9690bc711d04b3d4fd4b87c',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273797b37e01334a0897825d8b1',
+    music: {
+      label: 'Pink Venom',
+      href: 'https://open.spotify.com/intl-pt/track/0skYUMpS0AcbpjcGsAbRGj?si=250d19a8e6c84867'
+    },
+    listeners: 732606865,
+    id: 68
+  },
+  {
+    name: 'Panic! At The Disco',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebb256ae9a4b82bfff97776ae2',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b27323152d9337d6c57b116ed13a',
+    music: {
+      label: 'House Of Memories',
+      href: 'https://open.spotify.com/intl-pt/track/2DgdHcjWmO3qd50RzuBLgZ?si=7bd20c5e266245c7'
+    },
+    listeners: 725344129,
+    id: 69
+  },
+  {
+    name: 'The Police',
+    picture: 'https://i.scdn.co/image/ab67616d0000b273f3d470d6b255ecdfaa506f38',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2732043dd3544a339547d04b436',
+    music: {
+      label: 'Roxanne',
+      href: 'https://open.spotify.com/intl-pt/track/3EYOJ48Et32uATr9ZmLnAo?si=b30e85c30e5948b2'
+    },
+    listeners: 729934018,
+    id: 70
+  },
+  {
+    name: 'Lil Baby',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb6cad3eff5adc29e20f189a6c',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2735067cc9332e2fdc69ea7b7a9',
+    music: {
+      label: 'Freestyle',
+      href: 'https://open.spotify.com/intl-pt/track/5BbdKBZO0TH0GhfxUfyhL9?si=bb4c784c5d094329'
+    },
+    listeners: 703127920,
+    id: 71
+  },
+  {
+    name: 'Charlie Puth',
+    picture: 'https://i.scdn.co/image/ab67616d00001e024fe297c018e495a97662e5ac',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273872353e715cccea67fe3de91',
+    music: {
+      label: 'How Long',
+      href: 'https://open.spotify.com/intl-pt/track/6wmAHw1szh5RCKSRjiXhPe?si=f7d8faa498ec4c1f'
+    },
+    listeners: 685111385,
+    id: 72
+  },
+  {
+    name: 'Rema',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb7952358e33599027ae3c7f37',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2734104f6b4175d04d69ab73c85',
+    music: {
+      label: 'Calm Down',
+      href: 'https://open.spotify.com/intl-pt/track/6hgoYQDUcPyCz7LcTUHKxa?si=4d58f6c8f049411c'
+    },
+    listeners: 582207037,
+    id: 73
+  },
+  {
+    name: 'Eminem',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eba00b11c129b27a88fc72f36b',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273dbb3dd82da45b7d7f31b1b42',
+    music: {
+      label: 'The Real Slim Shady',
+      href: 'https://open.spotify.com/intl-pt/track/3yfqSUWxFvZELEM4PmlwIR?si=8140e87148eb4e38'
+    },
+    listeners: 1787837896,
+    id: 74
+  },
+  {
+    name: 'Rex Orange County',
+    picture: 'https://i.scdn.co/image/ab6761610000e5ebffb90f91cb2f487d7309f7bc',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2733a626302e9356ad154c4dffd',
+    music: {
+      label: 'Loving Is Easy',
+      href: 'https://open.spotify.com/intl-pt/track/7ASFZh1D0DPZro7UXUKGmd?si=07c08534b9774323'
+    },
+    listeners: 504568898,
+    id: 75
   }
 
 ]

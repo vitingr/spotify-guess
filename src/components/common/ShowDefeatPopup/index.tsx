@@ -16,7 +16,6 @@ export const ShowDefeatPopup: React.FC<ShowDefeatPopupProps> = ({
     setShowDefeatPopup(false);
     randomizeLeftMusic()
     randomizeRightMusic()
-    
     setScore(0);
 
   };
@@ -27,6 +26,7 @@ export const ShowDefeatPopup: React.FC<ShowDefeatPopupProps> = ({
       setShowState={setShowDefeatPopup}
       showState={showDefeatPopup}
       title="😭 Você perdeu..."
+      showCloseButton={false}
     >
       <div className="flex flex-col gap-4 items-center w-full">
         <div className="my-8">

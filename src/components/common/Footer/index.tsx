@@ -49,43 +49,43 @@ const Footer = () => {
                 <div className="flex items-center justify-between w-full">
                   <p className="text-[#a2adce] text-sm">Matheus Rocha</p>
                   <div className="flex">
-                    <a
+                    <Link
                       href="https://github.com/rocha985"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="white-icon ml-2"
                     >
                       <FaGithub size={22} />
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="https://www.linkedin.com/in/matheus-rocha-45a077300/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="white-icon ml-2"
+                      className="white-icon ml-2 "
                     >
                       <FaLinkedin size={22} />
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="flex items-center justify-between w-full py-3">
                   <p className="text-[#a2adce] text-sm">Vitor Gabriel</p>
                   <div className="flex">
-                    <a
+                    <Link
                       href="https://github.com/vitingr"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="white-icon ml-2"
                     >
                       <FaGithub size={22} />
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="https://www.linkedin.com/in/vitor-gabriel-0ab38a261/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="white-icon ml-2"
                     >
                       <FaLinkedin size={22} />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
