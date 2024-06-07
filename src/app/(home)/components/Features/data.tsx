@@ -5,18 +5,18 @@ import { FaRankingStar } from "react-icons/fa6";
 export const FEATURES_DATA = [
   {
     icon: "music",
-    title: "Veja seus artistas",
-    content: "Veja as músicas de seus artistas presentes no nosso game",
+    title: "Observe os Cartões de Músicas",
+    content: "No início de cada rodada, haverá dois cartões exibindo músicas diferentes.",
   },
   {
     icon: "people",
-    title: "Desubra os ouvintes",
-    content: "E descubra qual música possui a maior popularidade",
+    title: "Adivinhe a Quantidade de Ouvintes",
+    content: "Clique na música que acredita ter mais ouvintes.",
   },
   {
     icon: "ranking",
-    title: "Ranking competitivo",
-    content: "Dispute uma posição em nosso ranking com outras pessoas",
+    title: "Avance ou Tente Novamente",
+    content: "Se acertar, ganhe +1 ponto. Caso erre, jogue novamente para melhorar sua pontuação!",
   },
 ]
 
