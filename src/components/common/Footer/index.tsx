@@ -22,7 +22,7 @@ const Footer = () => {
             </span>
           </span>
           <p className="mt-2 text-[#a2adce]">Teste seus conhecimentos musicais</p>
-          <p className="text-sm text-[#a2adce]"></p>
+          <p className="text-sm text-[#a2adce]">Conquiste o topo do ranking!</p>
         </article>
         <article className="flex-row max-w-6xl mx-auto mt-12 w-full">
           <ul className="w-full flex gap-6 flex-wrap sm:flex-nowrap mt-16 sm:mt-0">
