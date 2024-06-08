@@ -47,7 +47,7 @@ export const MiniNavbar = ({ showMenu, setShowMenu }: MiniNavbarProps) => {
           <h3 className="w-full text-sm">Início</h3>
         </Link>
         <Link
-          href={'/home'}
+          href={'/'}
           className="flex w-full justify-between items-center gap-4 cursor-pointer"
           id="feed"
           onClick={() => setShowMenu(false)}
@@ -62,7 +62,7 @@ export const MiniNavbar = ({ showMenu, setShowMenu }: MiniNavbarProps) => {
           <h3 className="w-full text-sm">Feed</h3>
         </Link>
         <Link
-          href={'/articles'}
+          href={'/'}
           className="flex w-full justify-between items-center gap-4 cursor-pointer"
           id="purchases"
           onClick={() => setShowMenu(false)}
@@ -71,7 +71,7 @@ export const MiniNavbar = ({ showMenu, setShowMenu }: MiniNavbarProps) => {
           <h3 className="w-full text-sm">Artigos</h3>
         </Link>
         <Link
-          href={'/trending'}
+          href={'/'}
           className="flex w-full justify-between items-center gap-4 cursor-pointer"
           id="coupons"
           onClick={() => setShowMenu(false)}
@@ -80,7 +80,7 @@ export const MiniNavbar = ({ showMenu, setShowMenu }: MiniNavbarProps) => {
           <h3 className="w-full text-sm">Em Alta</h3>
         </Link>
         <Link
-          href={'/profile'}
+          href={'/'}
           className="flex w-full justify-between items-center gap-4 cursor-pointer"
           id="profile"
           onClick={() => setShowMenu(false)}

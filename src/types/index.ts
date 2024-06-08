@@ -12,6 +12,7 @@ export interface PopupProps {
   showState: boolean
   setShowState(arg: boolean): void
   handleSubmit?: () => void
+  showCloseButton?: boolean;
 }
 
 export interface UserProps {

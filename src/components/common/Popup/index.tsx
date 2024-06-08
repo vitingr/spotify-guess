@@ -1,7 +1,6 @@
-
-import { PopupProps } from "@/src/types";
 import React from "react";
 import { IoCloseOutline } from "react-icons/io5";
+import { PopupProps } from "@/src/types";
 
 export default function Popup({
   children,
@@ -10,6 +9,7 @@ export default function Popup({
   showState,
   setShowState,
   handleSubmit,
+  showCloseButton = true,
 }: PopupProps) {
   return (
     <div className={`popup-wrapper z-[999] ${showState ? "block" : "hidden"}`}>
@@ -17,21 +17,13 @@ export default function Popup({
         <div className="max-w-[500px] w-full p-10 bg-white rounded-xl">
           <div className="flex justify-between items-center">
             <h1 className="w-full text-2xl font-semibold">{title}</h1>
-            {handleSubmit ? (
+            {showCloseButton && (
               <IoCloseOutline
                 size={25}
                 className="cursor-pointer"
                 onClick={() => {
                   setShowState(false);
-                  handleSubmit();
-                }}
-              />
-            ) : (
-              <IoCloseOutline
-                size={25}
-                className="cursor-pointer"
-                onClick={async () => {
-                  setShowState(false);
+                  if (handleSubmit) handleSubmit();
                 }}
               />
             )}
@@ -44,4 +36,4 @@ export default function Popup({
       </div>
     </div>
   );
-};
+}
