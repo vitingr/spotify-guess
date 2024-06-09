@@ -2,12 +2,13 @@ import NextAuth from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import database from '../database/prisma'
-import { getUserByEmail, getUserByUsername } from '../users/get'
+import { getUserByUsername } from '../users/get'
 import { getRandomBackgroundColor } from '@/src/utils/getters/getRandomBackgroundColor'
 import { getRandomPicture } from '@/src/utils/getters/getRandomPicture'
 import { generateHash } from '@/src/utils/auth/generateHashPassword'
 
 const handler = NextAuth({
+  secret: process.env.NEXTAUTH_SECRET,
   session: {
     strategy: 'jwt'
   },
@@ -27,10 +28,8 @@ const handler = NextAuth({
         password: { label: 'Password', type: 'password' }
       },
       async authorize(credentials, req) {
-        console.log(credentials)
-
-        if (!credentials) {
-          console.error('Credenciais inexistentes')
+        if (!credentials || !credentials.username) {
+          console.error('Credenciais inexistentes ou incompletas')
           return null
         }
 
@@ -38,14 +37,11 @@ const handler = NextAuth({
           const user = await getUserByUsername(credentials.username)
 
           if (!user) {
-            const username = credentials.username?.toLocaleLowerCase()
+            const username = credentials.username.toLowerCase()
             const randomBackgroundColor = getRandomBackgroundColor()
             const randomPicture = getRandomPicture()
-            // const hashedPassword = await generateHash(
-            //   credentials?.password as string
-            // )
 
-            const user = await database.user.create({
+            const newUser = await database.user.create({
               data: {
                 username: `@${username}`,
                 points: 0,
@@ -56,16 +52,12 @@ const handler = NextAuth({
             })
 
             return {
-              id: user.id.toString(),
-              username: user.username,
-              points: user.points,
-              email: user.email
+              id: newUser.id.toString(),
+              username: newUser.username,
+              points: newUser.points,
+              image: newUser.picture
             }
           } else {
-            // const isPasswordCorrect = await compareHashedPassword(
-            //   user.password,
-            //   credentials.password
-            // )
             const isPasswordCorrect = user.password === credentials.password
 
             if (isPasswordCorrect) {
@@ -73,7 +65,7 @@ const handler = NextAuth({
                 id: user.id.toString(),
                 username: user.username,
                 points: user.points,
-                email: user.email
+                image: user.picture
               }
             } else {
               console.error('Senha incorreta')
@@ -88,70 +80,40 @@ const handler = NextAuth({
     })
   ],
   pages: {
-    signIn: '/',
+    signIn: '/login',
     signOut: '/api/auth/signOut',
     error: '/api/auth/error'
   },
   callbacks: {
-    async session({ session, token }: { session: any; token: any }) {
-      console.log(`session: ${JSON.stringify(session)}`)
-      console.log(`token: ${JSON.stringify(token)}`)
+    async session({ session, token }) {
+
       if (token) {
-        if (!session.user) {
-          session.user = {}
-        }
-        session.user.id = token.id
-        session.user.username = token.username
-        session.user.email = token.email
-        session.user.points = token.points
+        session.user = session.user || {}
+        session.user.image = token.picture
+        session.user.email = token.name as any
+        session.user.name = token.name as any
       }
+
+      console.log(`session: updated session = ${JSON.stringify(session)}`)
       return session
     },
-    async jwt({ token, user, account, profile }) {
-      console.log(`token: ${JSON.stringify(token)}`)
-      console.log(`user: ${JSON.stringify(user)}`)
-      console.log(`profile: ${JSON.stringify(profile)}`)
-      console.log(`account: ${JSON.stringify(account)}`)
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id
+        token.picture = user.image
+        token.name = user.username
+      }
+
       return token
     },
     async signIn({ profile, credentials }) {
-      try {
-        if (credentials) {
-          const user = await getUserByUsername(credentials.username! as string)
-
-          if (!user) {
-            const username = (
-              credentials.username as string
-            ).toLocaleLowerCase()
-            const randomBackgroundColor = getRandomBackgroundColor()
-            const randomPicture = getRandomPicture()
-            const hashedPassword = await generateHash(
-              credentials?.password as string
-            )
-
-            if (credentials && credentials.password) {
-              await database.user.create({
-                data: {
-                  username: `@${username}`,
-                  email: credentials.email as string,
-                  points: 0,
-                  password: hashedPassword,
-                  backgroundColor: randomBackgroundColor,
-                  picture: randomPicture
-                }
-              })
-            } else {
-              console.error('Credentials are undefined')
-            }
-          }
+      if (credentials) {
+        const user = await getUserByUsername(credentials.username as string)
+        if (user) {
           return true
-        } else {
-          return false
         }
-      } catch (error) {
-        console.error(`Não foi possível fazer login: ${error}`)
-        return false
       }
+      return false
     }
   }
 })

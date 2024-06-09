@@ -65,6 +65,7 @@ export const Navbar: React.FC = () => {
                     className="rounded-full"
                   />
                 </figure>
+                {JSON.stringify(session)}
               </div>
             ) : (
               <button
