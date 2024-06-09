@@ -9,14 +9,21 @@ import ToastMessage from '../components/toolkit/Toaster/ToastMessage'
 import Footer from '../components/common/Footer'
 import { UserProvider } from '../contexts/UserContext'
 import { AuthProvider } from '../contexts/AuthProvider'
+import { getMetaData } from '../utils/getters/getMetaData'
+
+export async function generateMetadata() {
+  return getMetaData({
+    title: 'Spotify Guess - Projeto Acadêmico de Jogos',
+    description:
+      'Spotify Guess é um projeto acadêmico desenvolvido para a faculdade, onde os usuários podem testar seus conhecimentos musicais tentando adivinhar qual música possui mais ouvintes.',
+    image: '/opengraph/opengraph.png',
+    type: "website"
+  })
+}
 
 export default function RootLayout({
   children
 }: Readonly<{ children: React.ReactNode }>) {
-  const metadata: Metadata = {
-    title: 'Higher Lower Game IFSP',
-    description: 'Um jogo zica'
-  }
 
   return (
     <html lang="pt" className="overflow-x-hidden">
