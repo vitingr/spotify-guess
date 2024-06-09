@@ -8,8 +8,8 @@ const Page: NextPage = () => {
   return (
     <main className="w-full flex flex-col items-center">
       <Header />
-      <Highlight />
       <ScoreBoard />
+      <Highlight />
       <Features />
     </main>
   )

@@ -14,10 +14,10 @@ export const Features: React.FC = () => {
       <h2 className="text-center text-2xl lg:text-3xl font-semibold">
         Como jogar
       </h2>
-      <ul className="w-full flex justify-center self-stretch h-auto items-center">
+      <ul className="w-full flex justify-center self-stretch h-auto items-center gap-8">
         {FEATURES_DATA.map((feature: Feature, index: number) => (
           <li
-            className="w-full max-w-xs flex flex-col items-center h-full gap-4"
+            className="bg-white p-4 rounded-md w-full max-w-xs flex flex-col items-center h-full gap-4 border border-slate-100 shadow-sm"
             key={`${feature.title}-${index}`}
           >
             <figure>{FEATURES_ICONS[feature.icon]}</figure>

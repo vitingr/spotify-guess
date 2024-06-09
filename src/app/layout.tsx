@@ -30,8 +30,8 @@ export default function RootLayout({
       <body className="h-screen w-screen selection:bg-emerald-500 selection:text-white overflow-x-hidden">
         <AuthProvider>
           <UserProvider>
-            <div className="main">
-              <div className="gradient" />
+            <div className="main lg:block hidden">
+              <div className="gradient lg:block hidden" />
             </div>
             <div className="z-10 relative">
               <Navbar />

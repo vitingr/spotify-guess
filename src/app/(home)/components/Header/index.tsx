@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
       as="section"
       data-cid="home-header"
       wrapperClassName="w-full"
-      className=" lg:px-12 px-4 lg:py-20 py-12"
+      className=" lg:px-12 px-4 lg:pt-44 lg:pb-20 pt-28 pb-12"
     >
       <div className="w-full flex justify-between gap-4">
         <figure className="w-full flex justify-center">
