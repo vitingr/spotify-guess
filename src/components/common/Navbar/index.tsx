@@ -62,10 +62,9 @@ export const Navbar: React.FC = () => {
                     height={40}
                     src={session.user?.image || ''}
                     alt={'user-profile-picture'}
-                    className="rounded-full"
+                    className="rounded-full transition-all duration-300 hover:brightness-95"
                   />
                 </figure>
-                {JSON.stringify(session)}
               </div>
             ) : (
               <button

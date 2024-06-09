@@ -15,6 +15,7 @@ import { BuiltInProviderType } from 'next-auth/providers/index'
 
 import { toast } from 'react-toastify'
 import { SubscribeUser } from '@/src/services/users/post'
+import { MiniFormSchema } from './schemas'
 
 type ProviderRecord = Record<
   LiteralUnion<BuiltInProviderType, string>,
@@ -60,6 +61,17 @@ export const MiniForm: React.FC<MiniFormProps> = ({
           onSubmit={async (e: React.SyntheticEvent) => {
             e.preventDefault()
             setIsSubmitting(!isSubmitting)
+
+            const result = MiniFormSchema.safeParse(data)
+
+            if (!result.success) {
+              result.error.errors.forEach(error => {
+                toast.error(error.message)
+              })
+              setIsSubmitting(false)
+              return
+            }
+
             try {
               const response = await SubscribeUser(data)
               if (response && response.ok) {
@@ -75,17 +87,22 @@ export const MiniForm: React.FC<MiniFormProps> = ({
           <label htmlFor="username">Username</label>
           <input
             type="text"
+            minLength={4}
+            maxLength={20}
             name="username"
             className="mt-1 rounded-sm text-sm outline-none border border-slate-300 p-3"
             placeholder="Seu nome de usuário"
             onChange={e => {
               setData({ ...data, username: e.target.value })
             }}
+            required
           />
           <label htmlFor="username" className="mt-6">
             Password
           </label>
           <input
+            maxLength={16}
+            minLength={8}
             type="password"
             name="username"
             className="mt-1 rounded-sm text-sm outline-none border border-slate-300 p-3"
@@ -93,6 +110,7 @@ export const MiniForm: React.FC<MiniFormProps> = ({
             onChange={e => {
               setData({ ...data, password: e.target.value })
             }}
+            required
           />
           <p className="mt-2 cursor-pointer text-green-700 transition-all duration-300 hover:brightness-110 text-xs underline">
             Esqueci minha senha
