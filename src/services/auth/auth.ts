@@ -98,7 +98,7 @@ const handler = NextAuth({
       if (user) {
         token.id = user.id
         token.picture = user.image
-        token.name = user.username
+        token.name = (user as any).username
       }
       return token
     },
