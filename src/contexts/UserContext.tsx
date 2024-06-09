@@ -12,7 +12,7 @@ interface UserContextType {
   getUserData: () => Promise<void>
 }
 
-const UserContext = createContext<UserContextType | null>(null)
+const UserContext = createContext<UserContextType | any>(null)
 
 export const UserProvider = ({ children }: { children: React.ReactNode }) => {
   const { data: session, status } = useSession()
@@ -21,36 +21,36 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
 
   const getUserData = async () => {
     try {
-      const user = await getUserByUsername(session?.user?.name || '')
-      if (user) {
-        const userDataWithCorrectIdType = { ...user, id: user.id.toString() }
-        setUserData({
-          ...userDataWithCorrectIdType,
-          createdAt: userDataWithCorrectIdType.createdAt.toISOString(),
-          updatedAt: userDataWithCorrectIdType.updatedAt.toISOString()
-        })
-      }
+      const requisiton = await fetch(`/api/users/${session?.user?.name || ''}`)
+      const response = await requisiton.json()
+      return response
+
     } catch (getUserDataError) {
       console.error(
         `Não foi possível obter as informações do usuário: ${getUserDataError}`
       )
+      return null
+    }
+  }
+
+  const fetchData = async () => {
+    if (await isUserAuthenticated(status)) {
+      const user = await getUserData()
+      setUserData(user)
     }
   }
 
   useEffect(() => {
-    const fetchData = async () => {
-      if (await isUserAuthenticated(status)) {
-        await getUserData()
-      }
+    if (status !== 'unauthenticated') {
+      fetchData()
     }
-    fetchData()
-  }, [session, status])
+  }, [session, status, setUserData])
 
   return (
-    <UserContext.Provider value={{userData, setUserData, getUserData}}>
+    <UserContext.Provider value={{ userData, setUserData, getUserData }}>
       {children}
     </UserContext.Provider>
   )
 }
 
-export const infoUser = () => useContext(UserContext)
+export const getUser = () => useContext(UserContext)

@@ -5,5 +5,6 @@ export interface ShowDefeatPopupProps {
   setScore(arg: number): void
   randomizeLeftMusic(): void
   randomizeRightMusic(): void
-  
+  highestScore: boolean
+  setHighestScore(arg: boolean): void
 }

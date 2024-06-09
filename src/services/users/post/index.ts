@@ -1,4 +1,5 @@
 import { signIn } from 'next-auth/react'
+import database from '../../database/prisma'
 
 export const SubscribeUser = async (data: {
   username: string
@@ -15,4 +16,21 @@ export const SubscribeUser = async (data: {
   }
 
   return response ? response : console.error('Houve um problema no servidor')
+}
+
+export const updateUserScore = async (userId: number, score: number) => {
+  console.log(userId)
+  console.log(score)
+  try {
+    await database.user.update({
+      where: {
+        id: userId
+      },
+      data: {
+        points: score
+      }
+    })
+  } catch (error) {
+    console.log(error)
+  }
 }

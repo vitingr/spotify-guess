@@ -1202,5 +1202,41 @@ export const ARTISTS_DATA: MusicProps[] = [
     },
     listeners: 1611057682,
     id: 100
+  },
+  {
+    name: 'Orion Reborn',
+    picture: 'https://i.scdn.co/image/ab6761610000e5eb3ef779aa0d271adb2b6a3ded',
+    background:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD3uZXFovQrVDew5iXL-ZIxCkubGgoICxyXQf1Vu7_PcO3vIzeystkIRGlMu_h8zx1TJU&usqp=CAU',
+    music: {
+      label: 'Honey',
+      href: 'https://open.spotify.com/track/0ekfusPxt56YsStKJsnWWG'
+    },
+    listeners: 47379,
+    id: 101
+  },
+  {
+    name: 'Gabriel o Pensador',
+    picture:
+      'https://upload.wikimedia.org/wikipedia/commons/4/41/Gabriel_o_Pensador.jpg',
+    background: 'https://i.ytimg.com/vi/a5xrd1t0ARg/maxresdefault.jpg',
+    music: {
+      label: '2345MEIA78',
+      href: 'https://open.spotify.com/track/1AqfIfEQyEaME7fiv3HzyU'
+    },
+    listeners: 20663245,
+    id: 102
+  },
+  {
+    name: 'Charlie Brown Jr.',
+    picture: 'https://i.scdn.co/image/ab67616d00001e025e7cb9ed84348b98973c823f',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b273f066003f5c78d52a42bb25b1',
+    music: {
+      label: 'Só os Loucos Sabem',
+      href: 'https://open.spotify.com/track/3nI0piSOxAik2RCpHGloB7'
+    },
+    listeners: 212533103,
+    id: 103
   }
 ]

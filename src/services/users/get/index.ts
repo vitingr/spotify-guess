@@ -23,7 +23,7 @@ export const getUserByEmail = async (email: string) => {
 export const getUserByUsername = async (username: string) => {
   const user = await database.user.findUnique({
     where: {
-      username: `@${username}`
+      username: `${username}`
     }
   })
 

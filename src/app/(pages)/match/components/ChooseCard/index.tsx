@@ -5,14 +5,22 @@ import { MusicProps } from '@/src/components/common/Cards/MusicCard/types'
 import { ShowDefeatPopup } from '@/src/components/common/ShowDefeatPopup'
 import { Container } from '@/src/components/toolkit/Container'
 import { ARTISTS_DATA } from '@/src/constants/artists'
+import { getUser } from '@/src/contexts/UserContext'
+import { getUserByUsername } from '@/src/services/users/get'
+import { updateUserScore } from '@/src/services/users/post'
+import { UserProps } from '@/src/types'
 import { randomize } from '@/src/utils/formatters/randomItem'
+import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 export const ChooseCard: React.FC = () => {
+  const { userData, setUserData } = getUser()
+
   const [leftMusic, setLeftMusic] = useState<MusicProps>()
   const [rightMusic, setRightMusic] = useState<MusicProps>()
   const [score, setScore] = useState<number>(0)
+  const [highestScore, setHighestScore] = useState<boolean>(false)
 
   const [showCheckmark, setShowCheckmark] = useState<boolean>(false)
   const [showDefeatPopup, setShowDefeatPopup] = useState<boolean>(false)
@@ -29,7 +37,35 @@ export const ChooseCard: React.FC = () => {
       setLeftMusic(rightMusic)
       await randomizeRightMusic()
     } else {
+      if (userData) {
+        if (userData.points < score) {
+          setUserData((prevUserData: UserProps) => ({
+            ...prevUserData,
+            points: score
+          }))
+          await updateUserScore()
+          setHighestScore(true)
+        }
+      }
       setShowDefeatPopup(!showDefeatPopup)
+    }
+  }
+
+  const updateUserScore = async () => {
+    try {
+      const response = await fetch('/api/users/updateScore', {
+          method: 'POST',
+          body: JSON.stringify({
+            userId: userData.id,
+            score: score
+          })
+        })
+
+        if (!response.ok) {
+          console.log('erro!')
+        }
+    } catch (error) {
+      console.error(error)
     }
   }
 
@@ -61,7 +97,7 @@ export const ChooseCard: React.FC = () => {
       <Container
         as="section"
         data-cid="choose-card-menu"
-        className="lg:pb-40 py-12 lg:px-12 p relative w-full flex flex-col items-center"
+        className="lg:px-12 lg:py-40 relative w-full flex flex-col items-center"
       >
         <div className="w-full flex flex-col items-center">
           <div className="w-full h-full flex gap-4 justify-between">
@@ -122,6 +158,8 @@ export const ChooseCard: React.FC = () => {
         setShowDefeatPopup={setShowDefeatPopup}
         randomizeRightMusic={randomizeRightMusic}
         randomizeLeftMusic={randomizeLeftMusic}
+        highestScore={highestScore}
+        setHighestScore={setHighestScore}
       />
     </>
   ) : null
