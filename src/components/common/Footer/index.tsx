@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import React from 'react';
-import { FooterData, FooterLink } from './types';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import Image from 'next/image';
-import { footerLinks } from '@/src/constants/footer';
+import Link from 'next/link'
+import React from 'react'
+import { FooterData, FooterLink } from './types'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import Image from 'next/image'
+import { footerLinks } from '@/src/constants/footer'
 
 const Footer = () => {
   return (
@@ -21,7 +21,9 @@ const Footer = () => {
               GUESS
             </span>
           </span>
-          <p className="mt-2 text-[#a2adce]">Teste seus conhecimentos musicais</p>
+          <p className="mt-2 text-[#a2adce]">
+            Teste seus conhecimentos musicais
+          </p>
           <p className="text-sm text-[#a2adce]">Conquiste o topo do ranking!</p>
         </article>
         <article className="flex-row max-w-6xl mx-auto mt-12 w-full">
@@ -102,7 +104,7 @@ const Footer = () => {
         </article>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

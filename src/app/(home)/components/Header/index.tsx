@@ -1,4 +1,3 @@
-
 import { Anchor } from '@/src/components/common/Anchor'
 import { Container } from '@/src/components/toolkit/Container'
 import Image from 'next/image'
@@ -25,7 +24,7 @@ export const Header: React.FC = () => {
           <h1 className="font-medium text-2xl lg:text-4xl">
             Qual música <br /> tem maior número <br /> de ouvintes?
           </h1>
-         <Anchor href='/match' label='Quero jogar!'/>
+          <Anchor href="/match" label="Quero jogar!" />
         </article>
       </div>
     </Container>

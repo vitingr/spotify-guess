@@ -1,5 +1,4 @@
-import { MusicProps } from "../components/common/Cards/MusicCard/types";
-
+import { MusicProps } from '../components/common/Cards/MusicCard/types'
 
 export const ARTISTS_DATA: MusicProps[] = [
   {
@@ -343,7 +342,8 @@ export const ARTISTS_DATA: MusicProps[] = [
   {
     name: 'The Weeknd',
     picture: 'https://i.scdn.co/image/ab67616100005174214f3cf1cbe7139c1e26ffbb',
-    background: 'https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36',
+    background:
+      'https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36',
     music: {
       label: 'Blinding Lights',
       href: 'https://open.spotify.com/intl-pt/track/0VjIjW4GlUZAMYd2vXMi3b?si=78644b765009441b'
@@ -1202,6 +1202,5 @@ export const ARTISTS_DATA: MusicProps[] = [
     },
     listeners: 1611057682,
     id: 100
-  },
-
+  }
 ]

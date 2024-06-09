@@ -1,4 +1,4 @@
-import { ButtonCopy } from "@/src/types/ButtonCopy"
+import { ButtonCopy } from '@/src/types/ButtonCopy'
 
 export const Button: React.FC<ButtonCopy> = ({ label, onClick, className }) => {
   return (

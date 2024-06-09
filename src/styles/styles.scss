@@ -14,7 +14,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 
   @media (resolution: 144dpi) {
     font-size: 80%;
@@ -110,24 +110,6 @@ html {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: saturate(180%) blur(7px);
   backdrop-filter: saturate(180%) blur(7px);
-}
-
-.drawer-toolkit {
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    @apply bg-slate-100;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    @apply bg-slate-300;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    @apply bg-slate-400;
-  }
 }
 
 .spinner {

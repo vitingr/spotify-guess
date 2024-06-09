@@ -5,7 +5,7 @@ import { MusicProps } from '@/src/components/common/Cards/MusicCard/types'
 import { ShowDefeatPopup } from '@/src/components/common/ShowDefeatPopup'
 import { Container } from '@/src/components/toolkit/Container'
 import { ARTISTS_DATA } from '@/src/constants/artists'
-import { randomize } from '@/src/utils/functions/randomItem'
+import { randomize } from '@/src/utils/formatters/randomItem'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
@@ -34,7 +34,7 @@ export const ChooseCard: React.FC = () => {
   }
 
   const randomizeLeftMusic = async () => {
-    setLeftMusic(await randomize(ARTISTS_DATA)?.[0] ?? [])
+    setLeftMusic((await randomize(ARTISTS_DATA)?.[0]) ?? [])
   }
 
   const randomizeRightMusic = async () => {
@@ -57,65 +57,72 @@ export const ChooseCard: React.FC = () => {
   }, [])
 
   return leftMusic && rightMusic ? (
-   <>
-    <Container
-      as="section"
-      data-cid="choose-card-menu"
-      className="lg:pb-40 py-12 lg:px-12 p relative w-full flex flex-col items-center"
-    >
-      <div className="w-full flex flex-col items-center">
-        <div className="w-full h-full flex gap-4 justify-between">
-          <article className="flex flex-col items-center w-full gap-8">
-            <button
-              className="w-full flex flex-col items-center"
-              onClick={() => handleChooseMusic(0)}
-            >
-              <MusicCard musicCard={leftMusic} />
-            </button>
-            <h2 className="font-semibold text-3xl text-slate-700">
-              {leftMusic.listeners.toLocaleString()} ouvintes
-            </h2>
-          </article>
-          <article className="w-full h-full min-h-[460px] flex gap-4 justify-center">
-            <figure className="h-full min-h-[460px] justify-center flex gap-8 flex-col items-center relative">
-              <h2 className="font-semibold text-xl lg:text-3xl text-slate-700">
-                Score: {score}
+    <>
+      <Container
+        as="section"
+        data-cid="choose-card-menu"
+        className="lg:pb-40 py-12 lg:px-12 p relative w-full flex flex-col items-center"
+      >
+        <div className="w-full flex flex-col items-center">
+          <div className="w-full h-full flex gap-4 justify-between">
+            <article className="flex flex-col items-center w-full gap-8">
+              <button
+                className="w-full flex flex-col items-center"
+                onClick={() => handleChooseMusic(0)}
+              >
+                <MusicCard musicCard={leftMusic} />
+              </button>
+              <h2 className="font-semibold text-3xl text-slate-700">
+                {leftMusic.listeners.toLocaleString()} ouvintes
               </h2>
-              <Image
-                src={'/svgs/lightVs.PNG'}
-                alt="logo-higher-lower"
-                width={140}
-                height={140}
-              />
-              {showCheckmark ? (
+            </article>
+            <article className="w-full h-full min-h-[460px] flex gap-4 justify-center">
+              <figure className="h-full min-h-[460px] justify-center flex gap-8 flex-col items-center relative">
+                <h2 className="font-semibold text-xl lg:text-3xl text-slate-700">
+                  Score: {score}
+                </h2>
                 <Image
-                  src={'/svgs/checkmark_green.PNG'}
-                  alt="checkmark"
-                  className="animate__fadeIn animate__animated animate__fadeOut"
-                  width={40}
-                  height={40}
-                  style={{
-                    position: 'absolute',
-                    top: '25%',
-                    left: '45%',
-                    transform: 'translate(-25%, -50%)'
-                  }}
+                  src={'/svgs/lightVs.PNG'}
+                  alt="logo-higher-lower"
+                  width={140}
+                  height={140}
                 />
-              ) : null}
-            </figure>
-          </article>
-          <article className="flex flex-col items-center w-full gap-8">
-            <button
-              className="w-full flex flex-col items-center"
-              onClick={() => handleChooseMusic(1)}
-            >
-              <MusicCard musicCard={rightMusic} />
-            </button>
-          </article>
+                {showCheckmark ? (
+                  <Image
+                    src={'/svgs/checkmark_green.PNG'}
+                    alt="checkmark"
+                    className="animate__fadeIn animate__animated animate__fadeOut"
+                    width={40}
+                    height={40}
+                    style={{
+                      position: 'absolute',
+                      top: '25%',
+                      left: '45%',
+                      transform: 'translate(-25%, -50%)'
+                    }}
+                  />
+                ) : null}
+              </figure>
+            </article>
+            <article className="flex flex-col items-center w-full gap-8">
+              <button
+                className="w-full flex flex-col items-center"
+                onClick={() => handleChooseMusic(1)}
+              >
+                <MusicCard musicCard={rightMusic} />
+              </button>
+            </article>
+          </div>
         </div>
-      </div>
-    </Container>
-    <ShowDefeatPopup score={score} setScore={setScore} showDefeatPopup={showDefeatPopup} setShowDefeatPopup={setShowDefeatPopup} randomizeRightMusic={randomizeRightMusic} randomizeLeftMusic={randomizeLeftMusic} />
-   </>
+      </Container>
+      <ShowDefeatPopup
+        score={score}
+        setScore={setScore}
+        showDefeatPopup={showDefeatPopup}
+        setShowDefeatPopup={setShowDefeatPopup}
+        randomizeRightMusic={randomizeRightMusic}
+        randomizeLeftMusic={randomizeLeftMusic}
+      />
+    </>
   ) : null
 }

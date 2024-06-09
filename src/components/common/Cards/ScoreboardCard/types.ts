@@ -1,5 +1,4 @@
-import { UserProps } from "@/src/types";
-
+import { UserProps } from '@/src/types'
 
 export interface ScoreboardCardProps {
   user: UserProps

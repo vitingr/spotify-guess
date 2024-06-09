@@ -1,14 +1,14 @@
-import database from "@/src/services/database/prisma"
-import { getHighestScoresUsers } from "@/src/services/users/get"
-
+import database from '@/src/services/database/prisma'
+import { getHighestScoresUsers } from '@/src/services/users/get'
 
 export const GET = async () => {
-    try {
-      let users = await getHighestScoresUsers()
+  try {
+    let users = await getHighestScoresUsers()
 
-      return new Response(JSON.stringify(users), {status: 200})
-
-    } catch (error) {
-        return new Response(`Falha ao fazer o GET dos posts, ${error}`, {status: 500})
-    }
+    return new Response(JSON.stringify(users), { status: 200 })
+  } catch (error) {
+    return new Response(`Falha ao fazer o GET dos posts, ${error}`, {
+      status: 500
+    })
+  }
 }

@@ -1,5 +1,4 @@
-import database from "../../database/prisma"
-
+import database from '../../database/prisma'
 
 export const getUserById = async (id: number) => {
   const user = await database.user.findUnique({

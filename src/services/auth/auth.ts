@@ -86,15 +86,12 @@ const handler = NextAuth({
   },
   callbacks: {
     async session({ session, token }) {
-
       if (token) {
         session.user = session.user || {}
         session.user.image = token.picture
         session.user.email = token.name as any
         session.user.name = token.name as any
       }
-
-      console.log(`session: updated session = ${JSON.stringify(session)}`)
       return session
     },
     async jwt({ token, user }) {
@@ -103,7 +100,6 @@ const handler = NextAuth({
         token.picture = user.image
         token.name = user.username
       }
-
       return token
     },
     async signIn({ profile, credentials }) {

@@ -19,10 +19,16 @@ export interface UserProps {
   id: string
   username: string
   password: string
-  email?: string
+  email?: string | null
   picture: string
   backgroundColor: string
   createdAt: string
   updatedAt: string
   points: number
+}
+
+export interface NextPageDefaultProps {
+  params: {
+    locale: string
+  }
 }

@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
               GUESS
             </span>
           </span>
-          <ul className="flex gap-8 items-center justify-center ml-6 w-full">
+          <ul className="flex flex-1 gap-8 items-center justify-center ml-6 w-full">
             <a href="/">
               <li className="text-sm navbar__link relative cursor-pointer font-medium">
                 Ínicio
@@ -52,17 +52,17 @@ export const Navbar: React.FC = () => {
               </li>
             </a>
           </ul>
-          <div className=" pl-4 border-l gap-4 w-auto border-slate-200 flex items-center justify-end">
+          <div className="pl-4 border-l gap-4 w-auto border-slate-200 flex items-center justify-end">
             <Sidebar />
             {session && (status as string) !== 'loading' ? (
               <div>
                 <figure>
                   <Image
-                    width={40}
-                    height={40}
+                    width={35}
+                    height={35}
                     src={session.user?.image || ''}
                     alt={'user-profile-picture'}
-                    className="rounded-full transition-all duration-300 hover:brightness-95"
+                    className="rounded-full cursor-pointer transition-all duration-300 hover:brightness-95"
                   />
                 </figure>
               </div>

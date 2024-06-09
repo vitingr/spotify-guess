@@ -3,10 +3,10 @@ import { z } from 'zod'
 export const MiniFormSchema = z.object({
   username: z
     .string()
-    .min(4, { message: 'Username must be at least 4 characters long' })
-    .max(20, { message: 'Username must be at most 20 characters long' }),
+    .min(4, { message: 'Nome do usuário deve ter o menos 4 caracteres' })
+    .max(20, { message: 'Nome do usuário deve ter no máximo 20 caracteres' }),
   password: z
     .string()
-    .min(8, { message: 'Password must be at least 8 characters long' })
-    .max(16, { message: 'Password must be at most 16 characters long' })
+    .min(8, { message: 'Senha do usuário deve ter o menos 8 caracteres' })
+    .max(16, { message: 'Senha do usuário deve ter no máximo 16 caracteres' })
 })

@@ -7,9 +7,9 @@ export const MusicCard: React.FC<MusicCardProps> = ({ musicCard }) => {
       <div className="rounded-sm h-full max-w-sm overflow-hidden relative cursor-pointer w-full bg-slate-800 group">
         <div
           className="w-full h-full absolute bg-cover bg-no-repeat transition-all duration-500 group-hover:brightness-110 group-hover:scale-110 cursor-pointer "
-          style={{ 
+          style={{
             backgroundImage: `url("${musicCard.background}")`,
-            backgroundPosition: 'center',
+            backgroundPosition: 'center'
           }}
         />
         <article className="group h-full flex items-end z-20 relative text-white p-4">

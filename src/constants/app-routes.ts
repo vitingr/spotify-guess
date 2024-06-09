@@ -9,6 +9,6 @@ export const APP_ROUTES = {
     signOut: '/api/auth/signOut',
     signIn: '/api/auth/signIn',
     error: '/api/auth/error',
-    credentials: '/api/auth/callback/credentials',
+    credentials: '/api/auth/callback/credentials'
   }
 }
