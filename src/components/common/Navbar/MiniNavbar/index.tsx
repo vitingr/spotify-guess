@@ -3,9 +3,7 @@ import React from "react";
 import { IoHomeOutline, IoDocumentsOutline } from "react-icons/io5";
 import { BsGrid } from "react-icons/bs";
 import { MdOutlineLocalFireDepartment } from "react-icons/md";
-import { PiUserCircleLight } from "react-icons/pi";
 import type { MiniNavbarProps } from "./types";
-import { revalidateTag } from "next/cache";
 import { Button } from "../../Buttons/Button";
 import { signOut } from "next-auth/react";
 
@@ -57,9 +55,6 @@ export const MiniNavbar = ({ showMenu, setShowMenu }: MiniNavbarProps) => {
           <BsGrid
             size={27.5}
             className="gray-icon"
-            // onClick={() => {
-            // 	revalidateTag("get-all-posts");
-            // }}
           />
           <h3 className="w-full text-sm">Feed</h3>
         </Link>

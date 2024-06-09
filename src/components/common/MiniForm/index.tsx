@@ -16,7 +16,6 @@ import { BuiltInProviderType } from 'next-auth/providers/index'
 import { toast } from 'react-toastify'
 import { SubscribeUser } from '@/src/services/users/post'
 import { MiniFormSchema } from './schemas'
-import { revalidateTag } from 'next/cache'
 
 type ProviderRecord = Record<
   LiteralUnion<BuiltInProviderType, string>,
@@ -81,7 +80,6 @@ export const MiniForm: React.FC<MiniFormProps> = ({
             } catch (error) {
               toast.error('Não foi possível realizar o login')
             } finally {
-              revalidateTag('scoreboard')
               setIsSubmitting(!isSubmitting)
             }
           }}

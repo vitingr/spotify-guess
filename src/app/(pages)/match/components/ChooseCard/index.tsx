@@ -60,10 +60,6 @@ export const ChooseCard: React.FC = () => {
             score: score
           })
         })
-
-        if (!response.ok) {
-          console.log('erro!')
-        }
     } catch (error) {
       console.error(error)
     }

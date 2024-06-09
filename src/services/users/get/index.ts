@@ -1,6 +1,6 @@
 import database from '../../database/prisma'
 
-export const getUserById = async (id: number) => {
+export const getUserById = async (id: string) => {
   const user = await database.user.findUnique({
     where: {
       id: id
@@ -10,20 +10,10 @@ export const getUserById = async (id: number) => {
   if (user) return user
 }
 
-export const getUserByEmail = async (email: string) => {
-  const user = await database.user.findUnique({
-    where: {
-      email: email
-    }
-  })
-
-  if (user) return user
-}
-
 export const getUserByUsername = async (username: string) => {
   const user = await database.user.findUnique({
     where: {
-      username: `${username}`
+      username: `@${username}`
     }
   })
 

@@ -45,7 +45,7 @@ const handler = NextAuth({
               data: {
                 username: `@${username}`,
                 points: 0,
-                password: credentials.password,
+                password: credentials.password.toString(),
                 backgroundColor: randomBackgroundColor,
                 picture: randomPicture
               }
@@ -80,7 +80,7 @@ const handler = NextAuth({
     })
   ],
   pages: {
-    signIn: '/login',
+    signIn: '/',
     signOut: '/api/auth/signOut',
     error: '/api/auth/error'
   },
@@ -89,8 +89,8 @@ const handler = NextAuth({
       if (token) {
         session.user = session.user || {}
         session.user.image = token.picture
-        session.user.email = token.name as any
         session.user.name = token.name as any
+        session.user.email = token.name as any
       }
       return session
     },

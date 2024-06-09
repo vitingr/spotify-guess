@@ -3,15 +3,14 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id              Int      @id @default(autoincrement()) @map("_id")
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
   username        String   @unique
   password        String
-  email           String?  @unique
   picture         String
   backgroundColor String
   points          Int      @default(0)

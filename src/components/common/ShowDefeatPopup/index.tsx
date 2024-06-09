@@ -3,7 +3,6 @@ import { Button } from '../Buttons/Button'
 import { Anchor } from '../Anchor'
 import Popup from '../Popup'
 import { ShowDefeatPopupProps } from './types'
-import { revalidateTag } from 'next/cache'
 
 export const ShowDefeatPopup: React.FC<ShowDefeatPopupProps> = ({
   setShowDefeatPopup,

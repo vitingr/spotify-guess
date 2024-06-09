@@ -7,7 +7,7 @@ export const SubscribeUser = async (data: {
 }) => {
   const response = await signIn('credentials', {
     username: data.username,
-    password: data.password,
+    password: data.password.toString(),
     redirect: false
   })
 
@@ -18,9 +18,7 @@ export const SubscribeUser = async (data: {
   return response ? response : console.error('Houve um problema no servidor')
 }
 
-export const updateUserScore = async (userId: number, score: number) => {
-  console.log(userId)
-  console.log(score)
+export const updateUserScore = async (userId: string, score: number) => {
   try {
     await database.user.update({
       where: {
