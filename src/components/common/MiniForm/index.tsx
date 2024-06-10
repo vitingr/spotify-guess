@@ -31,6 +31,7 @@ export const MiniForm: React.FC<MiniFormProps> = ({
 
   const [providers, setProviders] = useState<ProviderRecord | null>(null)
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
+  const [showForgotPasswordForm, setShowForgotPasswordForm] = useState<boolean>(false)
 
   const [data, setData] = useState({
     username: '',
@@ -112,7 +113,10 @@ export const MiniForm: React.FC<MiniFormProps> = ({
             }}
             required
           />
-          <p className="mt-2 cursor-pointer text-green-700 transition-all duration-300 hover:brightness-110 text-xs underline">
+          <p 
+            className="mt-2 cursor-pointer text-green-700 transition-all duration-300 hover:brightness-110 text-xs underline"
+            onClick={() => setShowForgotPasswordForm(true)}
+          >
             Esqueci minha senha
           </p>
           <button
@@ -123,6 +127,67 @@ export const MiniForm: React.FC<MiniFormProps> = ({
           </button>
         </form>
       </Popup>
+      {showForgotPasswordForm && (
+        <Popup
+          showState={true}
+          title="Esqueci minha senha"
+          setShowState={setShowForgotPasswordForm}
+        >
+          <form className="flex flex-col mt-12 space-y-4">
+  <label htmlFor="cardNumber">Número do Cartão</label>
+  <input
+    type="text"
+    name="cardNumber"
+    className="rounded-sm text-sm outline-none border border-gray-300 p-3"
+    placeholder="1234 5678 9012 3456"
+    maxLength={19}
+    required
+  />
+  <div className="flex justify-between space-x-4">
+    <div className="flex-1">
+      <label htmlFor="expiry">Data de Validade</label>
+      <input
+        type="text"
+        name="expiry"
+        className="rounded-sm text-sm outline-none border border-gray-300 p-3"
+        placeholder="MM/AA"
+        maxLength={5}
+        required
+      />
+    </div>
+    <div className="flex-1">
+      <label htmlFor="cvc">CVC</label>
+      <input
+        type="text"
+        name="cvc"
+        className="rounded-sm text-sm outline-none border border-gray-300 p-3"
+        placeholder="CVC"
+        maxLength={3}
+        required
+      />
+    </div>
+  </div>
+  <label htmlFor="name">Nome do Titular</label>
+  <input
+    type="text"
+    name="name"
+    className="rounded-sm text-sm outline-none border border-gray-300 p-3"
+    placeholder="Nome do Titular"
+    required
+  />
+  <button
+    onClick={(e) => {
+      e.preventDefault();
+      toast.success(':D');
+    }}
+    className="px-6 transition-all duration-300 hover:brightness-105 text-sm lg:text-base py-2 cursor-pointer w-full text-white rounded-md bg-gradient-to-br from-green-600 via-green-600 to-green-500"
+  >
+    Enviar
+  </button>
+</form>
+
+        </Popup>
+      )}
     </>
   )
 }
