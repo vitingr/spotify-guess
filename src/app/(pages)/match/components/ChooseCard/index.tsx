@@ -113,7 +113,9 @@ export const ChooseCard: React.FC = () => {
                   Score: {score}
                 </h2>
                 <Image
-                  src={'/svgs/lightVs.PNG'}
+                  src={
+                    'https://www.pngall.com/wp-content/uploads/5/Combat-Versus-PNG-Image.png'
+                  }
                   alt="logo-higher-lower"
                   width={140}
                   height={140}

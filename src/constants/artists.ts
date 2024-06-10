@@ -1164,7 +1164,7 @@ export const ARTISTS_DATA: MusicProps[] = [
       label: 'Mississippi Queen',
       href: 'https://open.spotify.com/intl-pt/track/4vO9dmzNRqDhFY3jD1a3P7?si=e5982ae613af4f02'
     },
-    listeners: 1,
+    listeners: 1323122,
     id: 97
   },
   {
