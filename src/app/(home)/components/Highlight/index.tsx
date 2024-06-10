@@ -1,6 +1,6 @@
 export const Highlight: React.FC = () => {
   return (
-    <section className="w-full flex flex-col items-center">
+    <section id="como-jogar" className="w-full flex flex-col items-center">
       <div className="w-full max-w-6xl">
         <h2 className="lg:mb-20 mb-12 w-full text-center font-[500] text-2xl lg:text-4xl cursor-default">
           Descubra qual{' '}

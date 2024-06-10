@@ -10,7 +10,7 @@ export const Features: React.FC = () => {
       wrapperClassName="w-full"
       className=" lg:px-12 px-4 lg:pb-36 flex flex-col items-center gap-6 lg:gap-12 relative"
     >
-      <div id="como-jogar" className="absolute" />
+      <div className="absolute" />
       <h2 className="text-center text-2xl lg:text-3xl font-semibold">
         Como jogar
       </h2>
