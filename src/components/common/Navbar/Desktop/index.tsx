@@ -17,17 +17,19 @@ export const NavbarDesktop: React.FC = () => {
     <>
       <nav className="hidden w-screen py-5 lg:flex flex-col items-center">
         <section className="glassmorphism-navbar fixed p-2 w-full max-w-6xl z-30 mx-auto flex justify-center items-center">
-          <span className="flex font-[700] justify-start text-lg cursor-pointer lg:text-3xl">
-            <span
-              className="font-[700] text-transparent text-lg lg:text-2xl bg-clip-text
+          <Link href={'/'}>
+            <span className="flex font-[700] justify-start text-lg cursor-pointer lg:text-3xl">
+              <span
+                className="font-[700] text-transparent text-lg lg:text-2xl bg-clip-text
         bg-gradient-to-r from-green-600 to-green-500 flex"
-            >
-              spotify
+              >
+                spotify
+              </span>
+              <span className="font-[700] text-slate-700 text-lg lg:text-2xl cursor-pointer">
+                GUESS
+              </span>
             </span>
-            <span className="font-[700] text-slate-700 text-lg lg:text-2xl cursor-pointer">
-              GUESS
-            </span>
-          </span>
+          </Link>
           <ul className="flex flex-1 gap-8 items-center justify-center ml-6 w-full">
             <a href="/">
               <li className="text-sm navbar__link relative cursor-pointer font-medium">

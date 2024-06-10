@@ -1,4 +1,3 @@
-import database from '@/src/services/database/prisma'
 import { getHighestScoresUsers } from '@/src/services/users/get'
 
 export const GET = async () => {

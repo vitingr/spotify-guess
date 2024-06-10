@@ -6,11 +6,9 @@ import { ShowDefeatPopup } from '@/src/components/common/ShowDefeatPopup'
 import { Container } from '@/src/components/toolkit/Container'
 import { ARTISTS_DATA } from '@/src/constants/artists'
 import { getUser } from '@/src/contexts/UserContext'
-import { getUserByUsername } from '@/src/services/users/get'
 import { updateUserScore } from '@/src/services/users/post'
 import { UserProps } from '@/src/types'
 import { randomize } from '@/src/utils/formatters/randomItem'
-import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
@@ -37,6 +35,7 @@ export const ChooseCard: React.FC = () => {
       setLeftMusic(rightMusic)
       await randomizeRightMusic()
     } else {
+      console.log(userData)
       if (userData) {
         if (userData.points < score) {
           setUserData((prevUserData: UserProps) => ({

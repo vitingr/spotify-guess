@@ -21,6 +21,7 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
 
   const getUserData = async () => {
     try {
+      console.log(`buscando user: ${session?.user?.name}`)
       const requisiton = await fetch(`/api/users/${session?.user?.name || ''}`)
       const response = await requisiton.json()
       return response
@@ -46,11 +47,11 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
     }
   }, [session, status, setUserData])
 
-  return (
+  return status !== "loading" ? (
     <UserContext.Provider value={{ userData, setUserData, getUserData }}>
       {children}
     </UserContext.Provider>
-  )
+  ) : null
 }
 
 export const getUser = () => useContext(UserContext)
