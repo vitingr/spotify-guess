@@ -20,6 +20,7 @@ export const SubscribeUser = async (data: {
 
 export const updateUserScore = async (userId: string, score: number) => {
   try {
+    console.log(userId)
     await database.user.update({
       where: {
         id: userId

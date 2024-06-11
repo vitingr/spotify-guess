@@ -37,13 +37,13 @@ const handler = NextAuth({
           const user = await getUserByUsername(credentials.username)
 
           if (!user) {
-            const username = credentials.username.toLowerCase()
+            const username = credentials.username
             const randomBackgroundColor = getRandomBackgroundColor()
             const randomPicture = getRandomPicture()
 
             const newUser = await database.user.create({
               data: {
-                username: `@${username}`,
+                username: `${username}`,
                 points: 0,
                 password: credentials.password.toString(),
                 backgroundColor: randomBackgroundColor,

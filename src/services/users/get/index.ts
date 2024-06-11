@@ -27,11 +27,14 @@ export const getAllUsers = async () => {
 }
 
 export const getHighestScoresUsers = async () => {
-  const users = await database.user.findMany({
-    orderBy: {
-      points: 'desc'
-    }
-  })
-
-  if (users) return users.slice(0, 10)
+  try {
+    const users = await database.user.findMany({
+      orderBy: {
+        points: 'desc'
+      }
+    })
+    if (users) return users.slice(0, 10)
+  } catch (error) {
+    console.log(error)
+  }
 }
