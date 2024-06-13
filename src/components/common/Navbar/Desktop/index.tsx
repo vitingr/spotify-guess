@@ -55,6 +55,7 @@ export const NavbarDesktop: React.FC = () => {
               </li>
             </a>
           </ul>
+          {JSON.stringify(session)}
           <div className="pl-4 border-l gap-4 w-auto border-slate-200 flex items-center justify-end">
             <Sidebar />
             {session && (status as string) !== 'loading' ? (
@@ -68,6 +69,7 @@ export const NavbarDesktop: React.FC = () => {
                     className="rounded-full cursor-pointer transition-all duration-300 hover:brightness-95"
                   />
                 </figure>
+                {JSON.stringify(session)}
               </div>
             ) : (
               <button

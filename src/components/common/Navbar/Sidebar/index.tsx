@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { HamburgerButton } from '../../HamburgerButton'
 import MiniNavbar from '../MiniNavbar'
 
-
 export const Sidebar: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false)
 

@@ -28,6 +28,8 @@ const handler = NextAuth({
         password: { label: 'Password', type: 'password' }
       },
       async authorize(credentials, req) {
+        console.log(credentials)
+
         if (!credentials || !credentials.username) {
           console.error('Credenciais inexistentes ou incompletas')
           return null
