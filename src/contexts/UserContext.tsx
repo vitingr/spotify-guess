@@ -42,8 +42,10 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   useEffect(() => {
+    console.log(status)
     if (status !== 'unauthenticated') {
       fetchData()
+      console.log('buscando data')
     }
   }, [session, status, setUserData])
 
