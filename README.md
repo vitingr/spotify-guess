@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Spotify Guess 
 
-## Getting Started
+Bem-vindo ao <strong>Spotify Guess</strong>! Este projeto é uma aplicação web onde os jogadores tentam adivinhar qual música tem mais ouvintes no Spotify. O jogo possui um sistema de classificação de usuários, permitindo que os jogadores compitam pelos melhores scores.
 
-First, run the development server:
+![Texto Alternativo](/public/svgs/darkLogo.PNG)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+## Instalação
+Para começar com o projeto, clone o 
+repositório e instale as dependências necessárias.
+
+### Pré-requisitos
+* Node.js (versão 14.x ou superior)
+* npm (versão 6.x ou superior) ou yarn
+
+### Clonar o Repositório
+
+```sh
+git clone https://github.com/seu-usuario/spotify-guess-game.git
+
+cd spotify-guess-game
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Instalar Dependências
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
+```sh
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+### Executar o Servidor de Desenvolvimento
+```sh
+npm run dev
+```
+```sh
+yarn dev
+```
+Abra seu navegador e navegue até http://localhost:3000 para ver a aplicação em ação.
 
-To learn more about Next.js, take a look at the following resources:
+### Uso
+Para jogar, siga estes passos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Visite a página inicial.
+* Clique no botão "Quero jogar!" para iniciar uma partida.
+* Escolha entre duas músicas clicando na que você acha que tem mais ouvintes.
+* Se você adivinhar corretamente, ganhará um ponto e passará para a próxima rodada.
+* Se você errar, o jogo termina e você pode ver sua pontuação.
+* Confira sua posição no ranking.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Funcionalidades
+* Observe os Cartões de Músicas: Exibe dois cartões de música no início de cada rodada.
+* Adivinhe a Quantidade de Ouvintes: Clique na música que você acredita ter mais ouvintes.
+* Avance ou Tente Novamente: Ganhe pontos por palpites corretos e tente novamente se errar.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Licença
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+
